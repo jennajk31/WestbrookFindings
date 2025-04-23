@@ -1,0 +1,485 @@
+/*
+1. Genaral Theme
+2. Mega Menu
+3. Meta Boxes
+4. Logo Settings Page
+5. Font Awesome - VC Map
+6. Form Add Sidebar
+7. Widget
+8. Custom VC
+9. Product Category
+10. Product Color Attribute
+11. Theme Options
+12. WooCommerce Customize
+13. Visual Composer
+14. Menu Color Picker
+
+*/
+.hidden{
+	display: none
+}
+/***************** 1. Genaral Theme *****************/
+#setting-error-tgmpa{
+	display: block;
+}
+/***************** 2. Mega Menu *****************/
+.menu-item-bar dt.menu-item-handle{
+	width: 500px;
+}
+.menu-item-settings{
+	width: 500px;
+	padding: 15px;
+}
+.menu-item-bar dt.menu-item-handle,
+.menu-item-settings{
+	max-width: 500px;
+}
+.menu-item-settings .description{
+	margin-bottom: 7px;
+}
+.menu-item-settings .description-thin{
+	width: 240px;
+}
+.menu-item-settings .description-wide{
+	width: 490px;
+}
+.menu-item-settings .wp-editor-wrap{
+	clear: both;
+}
+.menu-item-settings .wp-editor-container textarea.wp-editor-area {
+	height: 150px !important;
+}
+.field-ts-is-megamenu{
+	font-weight: bold;
+}
+.menu-edit .field-description.description-wide{
+	width: 100%;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #d9d9d9
+}
+.nav-menus-php .item-edit{
+	overflow: hidden;
+}
+.menu-item-settings .field-ts-bg-color label{
+	margin-right: 10px;
+}
+.menu-item-settings .field-ts-bg-color .description{
+	display: block;
+	margin-bottom: 10px;
+}
+
+/***************** 3. Meta Boxes *****************/
+.ts-meta-box-field{
+	width: 100%; 
+	overflow: hidden;
+	margin-bottom: 6px;
+}
+.form-table td.ts-meta-box-field{
+	width: 85%
+}
+.ts-meta-box-field label{
+	float: left;
+	line-height: 28px;
+	width: 27%;
+	font-weight: bold
+}
+.ts-meta-box-field .field{
+	float: left;
+	width: 68%
+}
+.ts-meta-box-field .field input:not(.colorpicker):not(.wp-picker-clear), 
+.ts-meta-box-field .field select, .ts-meta-box-field .field textarea{
+	min-width: 230px;
+}
+.ts-meta-box-field .field textarea{
+	height: 100px;
+	width: 364px;
+}
+.ts-meta-box-field .field input[type="button"]{
+	font-size: 13px;
+	vertical-align: middle;
+	margin-left: 4px;
+	min-width: 50px !important;
+	padding: 0 5px; 
+	line-height: 30px;
+	border: none; 
+	background-color: #00aef0; 
+	color: #fff
+}
+.ts-meta-box-field .field input[type="button"]:hover{
+	background-color: #0089bd; 
+	cursor: pointer
+}
+.ts-meta-box-field .field input[type="button"]:disabled{
+	background-color: #ebebeb; 
+	color: #666
+}
+.ts-meta-box-field .field input[type="button"]:disabled:hover{
+	cursor: auto
+}
+.ts-meta-box-field .field input[type="button"].wp-picker-clear{
+	padding: 0
+}
+.ts-meta-box-field .field input.upload_field{
+	width:65%;
+}
+.ts-meta-box-field .field .preview-image{
+	max-width: 50%; 
+	max-height: 200px; 
+	margin-top: 5px; 
+	margin-left: 1px; 
+	display: block;
+}
+.ts-meta-box-field.ts-heading-box{
+	margin-bottom: 10px;
+}
+.ts-meta-box-field.ts-heading-box h2{
+	margin-bottom: 0 !important; 
+	font-size: 22px !important; 
+	padding-left: 0 !important
+}
+
+#page_options.ts-hidden{
+	display: none !important
+}
+
+/* Meta Boxes - Gallery */
+#post_gallery .inside{
+	padding: 0;
+	margin: 0;
+}
+.ts-gallery-box{
+	padding: 0 0 0 5px;
+}
+.ts-gallery-box .image{
+	width: 75px;
+	float: left;
+	margin: 9px 9px 0 0;
+	position: relative;
+}
+.ts-gallery-box .image img{
+	width: 100%;
+	height: auto;
+	max-height:80px;
+	display: block;
+}
+.ts-gallery-box .image .del-image{
+	display: block;
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	height: 14px;
+	width: 14px;
+	background-color: #000;
+	border-radius: 50%;
+}
+.ts-gallery-box .image .del-image:before{
+	font-family: "Font Awesome 5 Free";
+	color: #fff;
+	content: '\f00d';
+	font-size: 11px;
+	position: absolute;
+	top: -1px;
+	right: 3px;
+	font-weight: 900;
+}
+.ts-gallery-box .image .del-image:hover{
+	cursor: pointer;
+}
+.ts-gallery-box .add-image{
+	padding: 5px 0;
+	margin: 10px 0;
+	display: block;
+	clear: both;
+	float: left
+}
+
+.ts-gallery-box.context-normal{
+	box-sizing: border-box; 
+	padding-left: 1px;
+}
+.ts-gallery-box.context-normal .image{
+	margin: 0 9px 9px 0;
+}
+.ts-gallery-box.context-normal .del-image{
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	bottom: auto; 
+	right: auto; 
+	width: 100%; 
+	height: 100%; 
+	background: transparent; 
+	border-radius: 0;
+}
+.ts-gallery-box.context-normal .del-image:before{
+	content: '\f00d'; 
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	text-align: center; 
+	font-size: 15px; 
+	color: red; 
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	line-height: 75px; 
+	left: 0; 
+	top: 0; 
+	background-color: rgba(255,255,255,0.3);
+}
+.ts-gallery-box.context-normal .add-image{
+	clear: none; 
+	margin: 0 9px 9px 0; 
+	padding: 0; 
+	width: 75px; 
+	height: 75px; 
+	background-color:#f5f5f5; 
+	text-decoration: none; 
+	font-size: 0
+}
+.ts-gallery-box.context-normal .add-image:before{
+	content: "\f067"; 
+	font-family: "Font Awesome 5 Free"; 
+	font-size: 15px; 
+	color: #0f0; 
+	text-align: center; 
+	width: 100%; 
+	height: 100%; 
+	line-height: 75px; 
+	display: block;
+	font-weight: 900;
+}
+
+/***************** 4. Logo Settings Page *****************/
+.ts-logo-settings-page-title{
+	font-size: 25px;
+	font-weight: bold;
+}
+#ts-logo-setting-page-wrapper h3{
+	font-size: 20px;
+	font-weight: bold
+}
+#ts-logo-setting-page-wrapper .responsive-options-wrapper label,
+#ts-logo-setting-page-wrapper .responsive-options-wrapper span{
+	margin-right: 2px;
+	vertical-align: top;
+	line-height: 22px;
+}
+#ts-logo-setting-page-wrapper .responsive-options-wrapper label{
+	font-weight: bold
+}
+#ts-logo-setting-page-wrapper .responsive-options-wrapper span{
+	margin-right: 15px;
+}
+#ts-logo-setting-page-wrapper .responsive-options-wrapper input.small-text{
+	width: 70px;
+	max-width: 70px
+}
+
+/***************** 5. Font Awesome - VC Map ******************/
+.ts-icon-selector > span.ts-select-icon {
+	width: 5%;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	height: 25px;
+}
+.ts-icon-selector > span.ts-select-icon:hover{
+	cursor: pointer;
+}
+.ts-icon-selector > span.ts-select-icon.selected .fa, 
+.ts-icon-selector > span.ts-select-icon:hover .fa{
+	color: #777777;
+}
+
+/***************** 6. Form Add Sidebar *****************/
+#ts-form-add-sidebar{
+	background-color: #fafafa;
+	border: 1px solid #e5e5e5;
+	padding: 30px 10px;
+	margin: 20px 0;
+	color: #23282d;
+	text-align: center;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04); 
+	box-shadow: 0 1px 1px rgba(0,0,0,.04); 
+	position: relative;
+}
+#ts-form-add-sidebar.loading:before{
+	content: "\f110";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 50%;
+    font-weight: 900;
+    top: 50%;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    font-size: 20px;
+    z-index: 10;
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+}
+#ts-form-add-sidebar.loading:after{
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    content: "";
+    background: rgba(255,255,255,0.7);
+}
+#ts-form-add-sidebar input[type="text"]{
+	width: 350px;
+	vertical-align: middle;
+	line-height:21px;
+}
+#ts-add-sidebar{
+	border: none;
+	border-radius: 0;
+}
+.sidebar-ts-custom-sidebar .delete-sidebar{
+	position: absolute;
+	top: 15px;
+	right: -1px;
+	font-size: 15px;
+	color: #ccc;
+	z-index: 99;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+.sidebar-ts-custom-sidebar .delete-sidebar:before{
+	content: "\f2ed";
+}
+.sidebar-ts-custom-sidebar .delete-sidebar:hover{
+	color: #aaa
+}
+
+/***************** 7. Widget *****************/
+#widgets-right .widget-inside textarea{
+	white-space: normal;
+	min-height: 100px
+}
+.widget .ts_meta_box_upload_button, 
+.widget .ts_meta_box_clear_image_button{
+	margin: 10px 0;
+}
+.widget .preview-image{
+	display: block;
+	max-width: 100%;
+}
+
+/***************** 8. Custom VC *****************/
+.wpb_element_wrapper .textarea_raw_html, 
+.vc_edit_form_elements .textarea_raw_html{
+	color: #888 !important; 
+	font-size: 12px !important;
+}
+
+/***************** 9. Product Category *****************/
+.ts-product-cat-upload-field .preview-image{
+	float: left;
+	margin-right: 10px;
+	min-width: 60px;
+}
+.ts-product-cat-upload-field .button-wrapper{
+	line-height: 60px;
+}
+.ts-product-cat-upload-field .preview-image img{
+	max-width: 60px;
+	max-height: 60px;
+}
+.taxonomy-product_cat table.wp-list-table .column-description img{
+	max-width: 100%;
+}
+
+/***************** 10. Product Color/Material Attribute *****************/
+.ts_color_preview_image, .ts_material_preview_image{
+	margin: 5px 0; 
+	width: 36px; 
+	height: 36px;
+}
+
+/***************** 11. Theme Options *****************/
+.redux-container .redux-dev-mode-notice-container{
+	display: none !important
+}
+.redux-container .typography-no-preview .typography-preview{
+	display: none !important
+}
+.redux-container .redux-group-tab > h2{
+	display: none !important
+}
+.redux-container .redux-section-field > h3{
+	text-align: center;
+	color: #e5534c;
+	background-color: #c0eaf9;
+	border: 1px solid #1a81bc
+}
+.redux-container .redux-info-field{
+	padding: 5px 10px; 
+	border-radius: 0;
+	background-color: #c0eaf9;
+	border: 1px solid #1a81bc;
+	text-align: center
+}
+.redux-container .redux-info-field > p{
+	margin: 0
+}
+.redux-container .form-table.form-table-section tr:first-child{
+	border-bottom: none !important
+}
+.redux-container .redux-group-tab .redux-section-desc{
+	text-align: center
+}
+.redux-container .redux-main span.description{
+	font-style: italic
+}
+.redux-container .redux-action_bar input[type="submit"]{
+	margin-left: 5px;
+}
+#drile_theme_options-ts_loading_image img{
+	max-width: 110px;
+}
+#drile_theme_options-ts_loading_image li.redux-image-select{
+	margin-right: 6px !important;
+}
+
+@media only screen and (max-width: 1405px){
+	.redux-container .redux_field_th{
+		padding: 20px 10px 20px 0 !important;
+	}
+	.redux-container .redux-main .redux-field-container{
+		padding: 20px 0 !important;
+	}
+}
+
+/***************** 12. WooCommerce Customize  *****************/
+#customize-control-woocommerce_catalog_columns{
+	display: none !important;
+}
+
+/***************** 13. Visual Composer *****************/
+body .ts_icon_vc{
+	background-image: url(../images/sky-visual.png);
+}
+body .ts_icon_vc_shop{
+	background-image: url(../images/sky-visual-shop.png);
+}
+
+body:not(.post-type-ts_footer_block) .wpb-elements-list li[data-element="ts_language_switcher"]
+,body:not(.post-type-ts_footer_block) .wpb-elements-list li[data-element="ts_currency_switcher"]{
+	display: none;
+}
+
+/***************** 14. Menu Color Picker *****************/
+.wp-picker-container .wp-picker-holder{
+	position: absolute;
+}
+.wp-picker-container.wp-picker-active .wp-picker-holder{
+	z-index: 99;
+}

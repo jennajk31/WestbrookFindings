@@ -1,0 +1,128 @@
+<?php
+/**
+ * Parcelforce expressAM rate.
+ *
+ * @package WC_RoyalMail/Rate
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+use WooCommerce\RoyalMail\Services;
+
+/**
+ * RoyalMail_Regular_Parcelforce_Express_AM class.
+ *
+ * Updated on 2025-04-07 as per https://www.royalmail.com/sites/royalmail.com/files/2025-03/our-prices-april-2025--v1-ta.pdf.
+ * See Parcelforce WorldWide page 7.
+ */
+class RoyalMail_Regular_Parcelforce_Express_AM extends RoyalMail_Rate {
+
+	/**
+	 * Pricing bands.
+	 *
+	 * Key is coverage / compensation for loss or damage and value is key-value
+	 * array where key is weight (up to and including) and value is the price
+	 * in penny.
+	 *
+	 * @var array
+	 */
+	protected $bands = array(
+		'2024' => array(
+			200 => array(
+				5000  => 1745,
+				10000 => 2045,
+				20000 => 2395,
+				30000 => 2795,
+			),
+		),
+		'2025' => array(
+			200 => array(
+				5000  => 1835,
+				10000 => 2150,
+				20000 => 2515,
+				30000 => 2935,
+			),
+		),
+	);
+
+	/**
+	 * Boxes for express9, 10, AM, 24, 48 – maximum length of 1.5m and 3m length/girth
+	 * combined.
+	 * Boxes for express48large – maximum length of 2.5m and 5m length/girth combined.
+	 *
+	 * Include few variations of this box to cover odd shaped items.
+	 *
+	 * @var array Shipping boxes
+	 */
+	protected $boxes = array(
+		'packet' => array(
+			'length' => 1500,
+			'width'  => 750,
+			'height' => 750,
+			'weight' => 30000,
+		),
+	);
+
+	/**
+	 * Slug of the rate (e.g. 'special-delivery-1pm').
+	 *
+	 * @return string
+	 */
+	public function get_rate_slug() {
+		return Services::PARCELFORCE_EXPRESS_AM;
+	}
+
+	/**
+	 * Get quotes for this rate.
+	 *
+	 * @param array  $items to be shipped.
+	 * @param string $packing_method the method selected.
+	 * @param string $destination Address to ship to.
+	 *
+	 * @return array{ 'parcelforce-express-am': float }|false|null
+	 */
+	public function get_quotes( $items, $packing_method, $destination ) {
+		$quote    = false;
+		$packages = $this->get_packages( $items, $packing_method );
+
+		if ( $packages ) {
+			foreach ( $packages as $package ) {
+				if ( empty( $package->id ) ) {
+					// Try a tube or fail.
+					if ( $package->length < 900 && $package->length + ( $package->width * 2 ) < 1040 ) {
+						$package->id = 'packet';
+					} else {
+						return false; // Unpacked item.
+					}
+				}
+
+				$bands   = $this->get_rate_bands();
+				$matched = false;
+
+				foreach ( $bands as $coverage => $weight_bands ) {
+					foreach ( $weight_bands as $weight => $value ) {
+						if ( is_numeric( $weight ) && $package->weight <= $weight ) {
+							$quote  += $value;
+							$matched = true;
+							break 2;
+						}
+					}
+				}
+
+				if ( ! $matched ) {
+					return;
+				}
+			}
+		}
+
+		// Rates include 20% VAT.
+		$quote                            = $quote / 1.2;
+		$quote                            = $quote / 100;
+		$quotes                           = array();
+		$quotes[ $this->get_rate_slug() ] = $quote;
+
+		return $quotes;
+	}
+}

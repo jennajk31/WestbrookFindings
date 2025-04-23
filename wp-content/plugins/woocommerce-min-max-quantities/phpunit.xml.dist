@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="./tests/bootstrap.php" backupGlobals="false"
+         colors="true" defaultTestSuite="unit" convertErrorsToExceptions="true" convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true" convertDeprecationsToExceptions="true"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage includeUncoveredFiles="false">
+        <include>
+            <directory suffix=".php">./includes</directory>
+            <file>./woocommerce-min-max-quantities.php</file>
+        </include>
+        <exclude>
+            <directory suffix=".php">./includes/compatibility</directory>
+            <directory suffix=".php">./includes/cli</directory>
+            <directory suffix=".php">./includes/admin</directory>
+            <file>./includes/class-wc-prl-ajax.php</file>
+            <file>./includes/wc-prl-template-functions.php</file>
+            <file>./includes/wc-prl-template-hooks.php</file>
+            <file>./includes/wc-prl-update-functions.php</file>
+        </exclude>
+    </coverage>
+    <testsuites>
+        <testsuite name="unit">
+            <directory prefix="test-" suffix=".php">./tests/unit</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

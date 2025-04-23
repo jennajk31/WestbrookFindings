@@ -1,0 +1,417 @@
+# Copyright (C) 2025 WooCommerce
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Australia Post Shipping 2.7.1\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/woocommerce-shipping-australia-post\n"
+"POT-Creation-Date: 2025-04-07 19:16:56+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: includes/class-wc-australia-post-privacy.php:22
+#: includes/class-wc-shipping-australia-post.php:221
+#: includes/class-wc-shipping-australia-post.php:542
+msgid "Australia Post"
+msgstr ""
+
+#: includes/class-wc-australia-post-privacy.php:30
+#. translators: %s is privacy page link.
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:93
+#. translators: %1$s Link to General Tab, %2$s end of link
+msgid ""
+"Australia Post requires that the %1$scurrency%2$s is set to Australian "
+"Dollars."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:98
+#. translators: %1$s Link to General Tab, %2$s end of link
+msgid ""
+"Australia Post requires that the <a href=\"%s\">base country/region</a> is "
+"set to Australia."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:155
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:156
+msgid "Support"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:157
+msgid "Docs"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:168
+#. translators: %s Link to WooCommerce
+msgid "WooCommerce Australia Post Shipping requires %s to be installed and active."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post-init.php:247
+#. translators: %s Admin link start and end
+msgid ""
+"Australia Post now supports shipping zones. The zone settings were added to "
+"a new Australia Post method on the \"Rest of the World\" Zone. See the "
+"zones %1$shere%2$s "
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:222
+msgid ""
+"The Australia Post extension obtains rates dynamically from the Australia "
+"Post API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:539
+msgid "Method Title"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:541
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:545
+msgid "Origin Postcode"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:547
+msgid "Enter the postcode for the <strong>sender</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:551
+msgid "Tax"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:552
+msgid "Calculate Rates Excluding Tax"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:554
+msgid ""
+"Calculate shipping rates excluding tax (if you plan to add tax via "
+"WooCommerce's tax system). By default rates returned by the Australia Post "
+"API include tax."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:558
+msgid "Rates and Services"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:560
+msgid "The following settings determine the rates you offer your customers."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:563
+msgid "Parcel Packing Method"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:568
+msgid "Default: Pack items individually"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:569
+msgid "Weight of all items"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:570
+msgid "Recommended: Pack into boxes with weights and dimensions"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:574
+msgid "Maximum weight (kg)"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:577
+msgid "Maximum weight per package in kg."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:583
+msgid "Satchel Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:586
+msgid "Enable Satchel Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:587
+msgid "Prioritze Satchel Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:588
+msgid "Disable Satchel Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:593
+msgid "Offer Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:598
+msgid "Offer the customer all returned rates"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:599
+msgid "Offer the customer the cheapest rate only, anonymously"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:609
+msgid "API Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:611
+msgid ""
+"Your API access details are obtained from the Australia Post website. You "
+"can obtain your <a "
+"href=\"https://developers.auspost.com.au/apis/pacpcs-registration\">own key "
+"here</a>, or just use ours."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:614
+msgid "API Key"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:616
+msgid "Leave blank to use our API Key."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:621
+msgid "Box Packer Library"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:626
+msgid "Speed Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:627
+msgid "Accurate Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:629
+msgid ""
+"Speed Packer packs items by volume, Accurate Packer check each dimension "
+"allowing more accurate packing but might be slow when you sell items in "
+"large quantities."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:632
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:633
+msgid "Enable debug mode"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:636
+msgid "Enable debug mode to show debugging information on your cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:680
+#. translators: %1$s is the opening link tag, %2$s is the closing link tag.
+msgid ""
+"The Australia Post API key you entered is invalid. Please make sure you "
+"entered a valid key (%1$swhich can be obtained here%2$s) and not your "
+"WooCommerce license key. Our API key will be used instead."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:801
+msgid ""
+"Australia Post debug mode is on - to hide these messages, turn debug mode "
+"off in the settings."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:823
+msgid "to_postcode is missing. Destination post code is missing."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:828
+msgid "from_postcode is missing. Please check your Origin Postcode."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1139
+#. translators: %d is package ID.
+msgid "Package %d"
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1380
+#: includes/class-wc-shipping-australia-post.php:1454
+#: includes/class-wc-shipping-australia-post.php:1561
+#. translators: %d product id.
+msgid "Product #%d is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1386
+#. translators: %d product id.
+msgid "Product #%d is missing weight. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1404
+msgid "Package is too heavy. Splitting."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1422
+#: includes/class-wc-shipping-australia-post.php:1491
+#. translators: %d is product ID.
+#. translators: %d product id.
+msgid ""
+"Product %d has invalid weight/dimensions. Aborting. See <a "
+"href=\"https://auspost.com.au/business/shipping/check-sending-guidelines/"
+"size-weight-guidelines\">the Australia Post package guidelines</a>."
+msgstr ""
+
+#: includes/class-wc-shipping-australia-post.php:1460
+#: includes/class-wc-shipping-australia-post.php:1580
+#. translators: %d product id.
+msgid "Product #%d is missing weight/dimensions. Aborting."
+msgstr ""
+
+#: includes/views/html-box-packing.php:10
+msgid "Box Sizes"
+msgstr ""
+
+#: includes/views/html-box-packing.php:48
+#: includes/views/html-box-packing.php:98
+#: includes/views/html-box-packing.php:195
+#: includes/views/html-box-packing.php:210 includes/views/html-services.php:17
+msgid "Name"
+msgstr ""
+
+#: includes/views/html-box-packing.php:49
+msgid "Outer Length"
+msgstr ""
+
+#: includes/views/html-box-packing.php:50
+msgid "Outer Width"
+msgstr ""
+
+#: includes/views/html-box-packing.php:51
+msgid "Outer Height"
+msgstr ""
+
+#: includes/views/html-box-packing.php:52
+msgid "Inner Length"
+msgstr ""
+
+#: includes/views/html-box-packing.php:53
+msgid "Inner Width"
+msgstr ""
+
+#: includes/views/html-box-packing.php:54
+msgid "Inner Height"
+msgstr ""
+
+#: includes/views/html-box-packing.php:55
+msgid "Weight of box"
+msgstr ""
+
+#: includes/views/html-box-packing.php:56
+msgid "Max Weight"
+msgstr ""
+
+#: includes/views/html-box-packing.php:57
+#: includes/views/html-box-packing.php:153
+#: includes/views/html-box-packing.php:204
+msgid "Type"
+msgstr ""
+
+#: includes/views/html-box-packing.php:58
+#: includes/views/html-box-packing.php:161
+msgid "Enabled"
+msgstr ""
+
+#: includes/views/html-box-packing.php:65
+msgid "Add Box"
+msgstr ""
+
+#: includes/views/html-box-packing.php:66
+msgid "Remove selected box(es)"
+msgstr ""
+
+#: includes/views/html-box-packing.php:70
+msgid ""
+"Items will be packed into these boxes depending based on item dimensions "
+"and volume. Outer dimensions will be passed to australia Post, whereas "
+"inner dimensions will be used for packing. Items not fitting into boxes "
+"will be packed individually."
+msgstr ""
+
+#: includes/views/html-box-packing.php:154
+#: includes/views/html-box-packing.php:205
+msgid "Box"
+msgstr ""
+
+#: includes/views/html-box-packing.php:155
+#: includes/views/html-box-packing.php:206
+msgid "Envelope"
+msgstr ""
+
+#: includes/views/html-box-packing.php:156
+#: includes/views/html-box-packing.php:207
+msgid "Packet"
+msgstr ""
+
+#: includes/views/html-box-packing.php:157
+#: includes/views/html-box-packing.php:208
+msgid "Tube"
+msgstr ""
+
+#: includes/views/html-services.php:10
+msgid "Services"
+msgstr ""
+
+#: includes/views/html-services.php:15
+msgid "Service"
+msgstr ""
+
+#: includes/views/html-services.php:16
+msgid "Enable"
+msgstr ""
+
+#: includes/views/html-services.php:18
+msgid "Extra Cover"
+msgstr ""
+
+#: includes/views/html-services.php:19
+msgid "Signature / Registered"
+msgstr ""
+
+#: includes/views/html-services.php:21
+#. translators: %s is currency symbol.
+msgid "Adjustment (%s)"
+msgstr ""
+
+#: includes/views/html-services.php:22
+msgid "Adjustment (%)"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Australia Post Shipping"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://woocommerce.com/products/australia-post-shipping-method/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Obtain parcel shipping rates dynamically via the Australia Post API for "
+"your orders."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com"
+msgstr ""

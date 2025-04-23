@@ -1,0 +1,631 @@
+<?php
+/**
+ * Plugin Name: WooCommerce Product Recommendations
+ * Plugin URI: https://woocommerce.com/products/product-recommendations/
+ * Description: Create smarter up-sells and cross-sells, place them anywhere, and measure their impact with in-depth analytics.
+ * Version: 4.1.4
+ * Author: Woo
+ * Author URI: https://woocommerce.com/
+ *
+ * Woo: 4486128:9732a1cdebd38f7eb1f58bb712f7fb0e
+ *
+ * Text Domain: woocommerce-product-recommendations
+ * Domain Path: /languages/
+ *
+ * Requires PHP: 7.4
+ *
+ * Requires at least: 6.2
+ * Tested up to: 6.8
+ *
+ * WC requires at least: 8.2
+ * WC tested up to: 9.8
+ *
+ * Requires Plugins: woocommerce
+ *
+ * License: GNU General Public License v3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Main plugin class.
+ *
+ * @class    WC_Product_Recommendations
+ * @version  4.1.4
+ */
+class WC_Product_Recommendations {
+
+	/**
+	 * Plugin version.
+	 *
+	 * @var string
+	 */
+	private $version = '4.1.4';
+
+	/**
+	 * Min required WC version.
+	 *
+	 * @var string
+	 */
+	private $wc_min_version = '8.2.0';
+
+	/**
+	 * The single instance of the class.
+	 *
+	 * @var WC_Product_Recommendations
+	 */
+	protected static $_instance = null;
+
+	/**
+	 * Loaded locations.
+	 *
+	 * @var WC_PRL_Locations
+	 */
+	public $locations;
+
+	/**
+	 * Deployments factory.
+	 *
+	 * @var WC_PRL_Deployments
+	 */
+	public $deployments;
+
+	/**
+	 * Filters Collection class.
+	 *
+	 * @var WC_PRL_Filters
+	 */
+	public $filters;
+
+	/**
+	 * Amplifiers Collection class.
+	 *
+	 * @var WC_PRL_Amplifiers
+	 */
+	public $amplifiers;
+
+	/**
+	 * Visibility Conditions Collection class.
+	 *
+	 * @var WC_PRL_Conditions
+	 */
+	public $conditions;
+
+	/**
+	 * DB Helper.
+	 *
+	 * @var WC_PRL_DB
+	 */
+	public $db;
+
+	/**
+	 * Templates functions.
+	 *
+	 * @var WC_PRL_Templates
+	 */
+	public $templates;
+
+	/**
+	 * Main WC_Product_Recommendations instance. Ensures only one instance is loaded or can be loaded - @see 'WC_PRL()'.
+	 *
+	 * @static
+	 * @return  WC_Product_Recommendations
+	 */
+	public static function instance() {
+		if ( is_null( self::$_instance ) ) {
+			self::$_instance = new self();
+		}
+		return self::$_instance;
+	}
+
+	/**
+	 * Cloning is forbidden.
+	 */
+	public function __clone() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Foul!', 'woocommerce-product-recommendations' ), '1.0.0' );
+	}
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 */
+	public function __wakeup() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Foul!', 'woocommerce-product-recommendations' ), '1.0.0' );
+	}
+
+	/**
+	 * Make stuff.
+	 */
+	protected function __construct() {
+		// Entry point.
+		add_action( 'plugins_loaded', array( $this, 'initialize_plugin' ), 9 );
+	}
+
+	/**
+	 * Plugin URL getter.
+	 *
+	 * @return string
+	 */
+	public function get_plugin_url() {
+		return untrailingslashit( plugins_url( '/', __FILE__ ) );
+	}
+
+	/**
+	 * Plugin path getter.
+	 *
+	 * @return string
+	 */
+	public function get_plugin_path() {
+		return untrailingslashit( plugin_dir_path( __FILE__ ) );
+	}
+
+	/**
+	 * Plugin base path name getter.
+	 *
+	 * @return string
+	 */
+	public function get_plugin_basename() {
+		return plugin_basename( __FILE__ );
+	}
+
+	/**
+	 * Plugin version getter.
+	 *
+	 * @param  boolean $base
+	 * @param  string  $version
+	 * @return string
+	 */
+	public function get_plugin_version( $base = false, $version = '' ) {
+
+		$version = $version ? $version : $this->version;
+
+		if ( $base ) {
+			$version_parts = explode( '-', $version );
+			$version       = sizeof( $version_parts ) > 1 ? $version_parts[0] : $version;
+		}
+
+		return $version;
+	}
+
+	/**
+	 * Get the file modified time as a cache buster if we're in dev mode.
+	 *
+	 * @since 4.1.0
+	 *
+	 * @param  string $file
+	 * @return string
+	 */
+	public function get_file_version( $file ) {
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG && file_exists( $file ) ) {
+			return filemtime( $file );
+		}
+		return $this->get_plugin_version();
+	}
+
+	/**
+	 * Define constants if not present.
+	 *
+	 * @since  1.2.4
+	 *
+	 * @return boolean
+	 */
+	protected function maybe_define_constant( $name, $value ) {
+		if ( ! defined( $name ) ) {
+			define( $name, $value );
+		}
+	}
+
+	/**
+	 * Indicates whether the plugin is fully initialized.
+	 *
+	 * @since  1.2.4
+	 *
+	 * @return boolean
+	 */
+	public function is_plugin_initialized() {
+		return isset( WC_PRL()->locations );
+	}
+
+	/**
+	 * Fire in the hole!
+	 */
+	public function initialize_plugin() {
+
+		$this->define_constants();
+		$this->maybe_create_store();
+
+		// WC version sanity check.
+		if ( ! function_exists( 'WC' ) || version_compare( WC()->version, $this->wc_min_version ) < 0 ) {
+			/* translators: %s: WC min version */
+			$notice = sprintf( __( 'WooCommerce Product Recommendations requires at least WooCommerce <strong>%s</strong>.', 'woocommerce-product-recommendations' ), $this->wc_min_version );
+
+			// Including functions as, admin notices uses wc_prl_get_formatted_screen_id.
+			require_once WC_PRL_ABSPATH . 'includes/wc-prl-functions.php';
+			require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-notices.php';
+			WC_PRL_Admin_Notices::add_notice( $notice, 'error' );
+
+			return false;
+		}
+
+		// PHP version check.
+		if ( ! function_exists( 'phpversion' ) || version_compare( phpversion(), '7.4.0', '<' ) ) {
+			/* translators: %s: PHP min version */
+			$notice = sprintf(
+				__(
+					'WooCommerce Product Recommendations requires at least PHP <strong>%1$s</strong>. Learn <a href="%2$s">how to update PHP</a>.',
+					'woocommerce-product-recommendations'
+				),
+				'7.4.0',
+				$this->get_resource_url( 'update-php' )
+			);
+
+			// Including functions as, admin notices uses wc_prl_get_formatted_screen_id.
+			require_once WC_PRL_ABSPATH . 'includes/wc-prl-functions.php';
+			require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-notices.php';
+			WC_PRL_Admin_Notices::add_notice( $notice, 'error' );
+		}
+
+		$this->includes();
+
+		// Instantiate global singletons.
+		$this->locations   = new WC_PRL_Locations();
+		$this->deployments = new WC_PRL_Deployments();
+		$this->filters     = new WC_PRL_Filters();
+		$this->amplifiers  = new WC_PRL_Amplifiers();
+		$this->conditions  = new WC_PRL_Conditions();
+		$this->db          = new WC_PRL_DB();
+		$this->templates   = new WC_PRL_Templates();
+
+		// Load translations hook.
+		add_action( 'init', array( $this, 'load_translation' ) );
+
+		// Init Shortcodes.
+		add_action( 'init', array( 'WC_PRL_Shortcodes', 'init' ) );
+	}
+
+	/**
+	 * Constants.
+	 */
+	public function define_constants() {
+		$this->maybe_define_constant( 'WC_PRL_VERSION', $this->version );
+		$this->maybe_define_constant( 'WC_PRL_SUPPORT_URL', 'https://woocommerce.com/my-account/marketplace-ticket-form/' );
+		$this->maybe_define_constant( 'WC_PRL_ABSPATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+	}
+
+	/**
+	 * A simple dumb datastore for sharing information accross our plugins.
+	 *
+	 * @since  1.3.0
+	 *
+	 * @return void
+	 */
+	private function maybe_create_store() {
+		if ( ! isset( $GLOBALS['sw_store'] ) ) {
+			$GLOBALS['sw_store'] = array();
+		}
+	}
+
+	/**
+	 * Includes.
+	 */
+	public function includes() {
+
+		// Install.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-install.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-amplifier-cache-db.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-frequencies-db.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-tracking-db.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-deployment-db.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-queue-db.php';
+		require_once WC_PRL_ABSPATH . 'includes/db/class-wc-prl-db.php';
+
+		// Compatibility.
+		require_once WC_PRL_ABSPATH . 'includes/compatibility/class-wc-prl-compatibility.php';
+
+		// Functions.
+		require_once WC_PRL_ABSPATH . 'includes/wc-prl-functions.php';
+
+		// Templates.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-templates.php';
+
+		// Post types.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-post-types.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-post-data.php';
+
+		// Engines.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-engine.php';
+		require_once WC_PRL_ABSPATH . 'includes/data-stores/class-wc-prl-engine-data-store-cpt.php';
+
+		// Locations.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-locations.php';
+		require_once WC_PRL_ABSPATH . 'includes/abstracts/class-wc-prl-abstract-location.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-cart-page.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-product-details.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-product-archive.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-order-received.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-pay-page.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-checkout.php';
+		require_once WC_PRL_ABSPATH . 'includes/locations/class-wc-prl-location-shop.php';
+
+		// Deployments.
+		require_once WC_PRL_ABSPATH . 'includes/data-stores/class-wc-prl-deployment-data.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-deployment.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-deployments.php';
+
+		// - Background generator.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-abstract-background-queue.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-generator.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-generator-queue.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-amplifier-generator.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-amplifier-generator-queue.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-as-generator.php';
+
+		// Conditions.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-conditions.php';
+		require_once WC_PRL_ABSPATH . 'includes/abstracts/class-wc-prl-abstract-condition.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-date.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-guest.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-geolocate.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-recent-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-recent-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-recent-product.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-cart-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-cart-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-cart-product.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-cart-total.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-cart-item-value.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-product-id.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-product-price.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-product-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-product-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-product-stock-status.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-archive-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-archive-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-order-total.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-order-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-order-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-order-product.php';
+		require_once WC_PRL_ABSPATH . 'includes/conditions/class-wc-prl-condition-order-item-value.php';
+
+		// Engine Filters.
+		require_once WC_PRL_ABSPATH . 'includes/abstracts/class-wc-prl-abstract-filter.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-filters.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-attribute.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-attribute-context.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-category.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-category-context.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-tag.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-tag-context.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-price.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-price-context.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-stock-status.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-recently-viewed.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-product.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-sales.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-featured.php';
+		require_once WC_PRL_ABSPATH . 'includes/filters/class-wc-prl-filter-freshness.php';
+
+		// Engine Amplifiers.
+		require_once WC_PRL_ABSPATH . 'includes/abstracts/class-wc-prl-abstract-amplifier.php';
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-amplifiers.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-freshness.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-frequently-bought-together.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-others-also-bought.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-price.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-rating.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-popularity.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-conversion-rate.php';
+		require_once WC_PRL_ABSPATH . 'includes/amplifiers/class-wc-prl-amplifier-random.php';
+
+		// Front-end AJAX handlers.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-ajax.php';
+
+		// Tracking.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-tracking.php';
+
+		// Order hooks.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-order.php';
+
+		// Notices.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-notices.php';
+
+		// Analytics.
+		require_once WC_PRL_ABSPATH . 'includes/admin/analytics/class-wc-prl-admin-analytics.php';
+
+		// Tracker.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-tracker.php';
+
+		// Shortcodes.
+		require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-shortcodes.php';
+
+		// REST API.
+		require_once WC_PRL_ABSPATH . 'includes/api/class-wc-prl-rest-api.php';
+
+		// Blocks.
+		require_once WC_PRL_ABSPATH . 'includes/blocks/class-wc-prl-blocks.php';
+
+		// Admin includes.
+		if ( is_admin() ) {
+			$this->admin_includes();
+		}
+
+		// WP-CLI includes.
+		if ( defined( 'WP_CLI' ) && WP_CLI ) {
+			require_once WC_PRL_ABSPATH . 'includes/class-wc-prl-cli.php';
+		}
+	}
+
+	/**
+	 * Admin & AJAX functions and hooks.
+	 */
+	public function admin_includes() {
+
+		// Admin notices handling.
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-notices.php';
+
+		// Admin post type settings.
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-post-types.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/list-tables/class-wc-prl-admin-list-engines.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/list-tables/class-wc-prl-admin-list-deployments.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/list-tables/class-wc-prl-admin-list-queue.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/list-tables/class-wc-prl-admin-list-stale-queue.php';
+
+		// Admin functions and hooks.
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin.php';
+		// Pages.
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-locations.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-deploy.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-hooks.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-performance.php';
+		require_once WC_PRL_ABSPATH . 'includes/admin/class-wc-prl-admin-generator-queue.php';
+	}
+
+	/**
+	 * Load textdomain.
+	 */
+	public function load_translation() {
+		load_plugin_textdomain( 'woocommerce-product-recommendations', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		// Subscribe to automated translations.
+		add_filter( 'woocommerce_translations_updates_for_' . basename( __FILE__, '.php' ), '__return_true' );
+	}
+
+	/**
+	 * Returns URL to a doc or support resource.
+	 *
+	 * @since  1.3.0
+	 *
+	 * @param  string $handle
+	 * @return string
+	 */
+	public function get_resource_url( $handle ) {
+
+		$resource = false;
+
+		if ( 'update-php' === $handle ) {
+			$resource = 'https://woocommerce.com/document/how-to-update-your-php-version/';
+		} elseif ( 'docs-contents' === $handle ) {
+			$resource = 'https://woocommerce.com/document/product-recommendations/';
+		} elseif ( 'page-caching' === $handle ) {
+			$resource = 'https://woocommerce.com/document/product-recommendations/frequently-asked-questions/#faq_missing_recommendations';
+		} elseif ( 'regeneration' === $handle ) {
+			$resource = 'https://woocommerce.com/document/product-recommendations/frequently-asked-questions/#faq_regeneration';
+		} elseif ( 'cli' === $handle ) {
+			$resource = 'https://woocommerce.com/document/product-recommendations/frequently-asked-questions/#faq_cli';
+		} elseif ( 'updating' === $handle ) {
+			$resource = 'https://woocommerce.com/document/how-to-update-woocommerce/';
+		} elseif ( 'ticket-form' === $handle ) {
+			$resource = WC_PRL_SUPPORT_URL;
+		} elseif ( 'whats-new-1-4' === $handle ) {
+			$resource = 'https://somewherewarm.com/a-pinch-of-machine-learning-for-your-woocommerce-store/';
+		}
+
+		return $resource;
+	}
+
+	/**
+	 * Log using 'WC_Logger' class.
+	 *
+	 * @param  string $message
+	 * @param  string $level
+	 * @param  string $context
+	 */
+	public function log( $message, $level, $context ) {
+		$logger = wc_get_logger();
+		$logger->log( $level, $message, array( 'source' => $context ) );
+	}
+
+	/**
+	 * Handle plugin activation process.
+	 *
+	 * @since  2.1.0
+	 *
+	 * @return void
+	 */
+	public function on_activation() {
+		// Add daily maintenance process.
+		if ( ! wp_next_scheduled( 'wc_prl_daily' ) ) {
+			wp_schedule_event( time() + 10, 'daily', 'wc_prl_daily' );
+		}
+	}
+
+	/**
+	 * Handle plugin deactivation process.
+	 *
+	 * @since  2.1.0
+	 *
+	 * @return void
+	 */
+	public function on_deactivation() {
+		// Clear daily maintenance process.
+		wp_clear_scheduled_hook( 'wc_prl_daily' );
+	}
+
+	/**
+	 * Checks if the current admin screen belongs to PRL extension.
+	 *
+	 * @return  bool
+	 */
+	public function is_current_screen() {
+		global $current_screen;
+		$screen_id = $current_screen ? $current_screen->id : '';
+
+		if ( in_array( $screen_id, $this->get_screen_ids(), true ) ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Checks if the current admin screen is the legacy reports tab.
+	 *
+	 * @return  bool
+	 */
+	public function is_legacy_reports_screen() {
+		global $current_screen;
+		$screen_id = $current_screen ? $current_screen->id : '';
+
+		if ( 'woocommerce_page_wc-reports' === $screen_id && isset( $_GET['tab'] ) && 'prl_recommendations' === $_GET['tab'] ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get PRL screen ids.
+	 */
+	public function get_screen_ids() {
+		$screens = array();
+
+		if ( version_compare( WC()->version, '7.3.0' ) < 0 ) {
+			$prefix = sanitize_title( __( 'WooCommerce', 'woocommerce' ) );
+		} else {
+			$prefix = 'woocommerce';
+		}
+
+		$screens[] = 'prl_engine';
+		$screens[] = 'edit-prl_engine';
+		$screens[] = $prefix . '_page_prl_locations';
+		$screens[] = $prefix . '_page_prl_performance';
+
+		return (array) apply_filters( 'woocommerce_prl_screen_ids', $screens );
+	}
+}
+
+/**
+ * Returns the main instance of WC_Product_Recommendations to prevent the need to use globals.
+ *
+ * @return  WC_Product_Recommendations
+ */
+function WC_PRL() {
+	return WC_Product_Recommendations::instance();
+}
+
+WC_PRL();
+
+register_activation_hook( __FILE__, array( WC_PRL(), 'on_activation' ) );
+register_deactivation_hook( __FILE__, array( WC_PRL(), 'on_deactivation' ) );

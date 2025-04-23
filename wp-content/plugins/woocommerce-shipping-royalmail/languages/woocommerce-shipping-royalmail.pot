@@ -1,0 +1,398 @@
+# Copyright (C) 2025 WooCommerce
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Royal Mail 3.5.3\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/woocommerce-shipping-royalmail\n"
+"POT-Creation-Date: 2025-04-15 14:03:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: includes/class-wc-royalmail-privacy.php:24
+msgid "Royalmail"
+msgstr ""
+
+#: includes/class-wc-royalmail-privacy.php:32
+#. translators: %s is a URL to plugin documentation.
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+
+#: includes/class-wc-royalmail.php:192
+#. translators: %s is a link to currency settings.
+msgid ""
+"Royal Mail requires that the <a href=\"%s\">currency</a> is set to Pound "
+"sterling."
+msgstr ""
+
+#: includes/class-wc-royalmail.php:201
+#. translators: %s is a link to base country/region settings.
+msgid ""
+"Royal Mail requires that the <a href=\"%s\">base country/region</a> is set "
+"to United Kingdom."
+msgstr ""
+
+#: includes/class-wc-royalmail.php:216
+msgid "Support"
+msgstr ""
+
+#: includes/class-wc-royalmail.php:217
+msgid "Docs"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:53
+msgid "Printed Papers"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:54
+msgid "Book"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:55
+msgid "Tube/Rolls"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:96
+#: includes/class-wc-shipping-royalmail-admin.php:140
+#: includes/class-wc-shipping-royalmail-admin.php:211
+#. translators: %s is a label printed papers.
+msgid "Use %s rates to ship package"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:107
+#: includes/class-wc-shipping-royalmail-admin.php:154
+#: includes/class-wc-shipping-royalmail-admin.php:227
+#. translators: %1$s is a label book.
+msgid ""
+"This product is a %1$s. Only %1$ss can be sent to the Republic of Ireland "
+"with Printed Papers rates."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:118
+#: includes/class-wc-shipping-royalmail-admin.php:243
+#. translators: %1$s is a label tube.
+msgid ""
+"Use %s rates to ship package. For rolled and cylinder-shaped parcels, the "
+"length of the item plus twice the diameter ( width &amp; height must be "
+"equal ) must not exceed 104cm, with the greatest dimension being no more "
+"than 90cm."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:168
+#. translators: %1$s is a label tube.
+msgid ""
+"Use %s rates to ship package. The length of the item plus twice the "
+"diameter must not exceed 104cm, with the greatest dimension being no more "
+"than 90cm. And the width and height of this item should be equal."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:194
+msgid "Royal Mail Fields"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:195
+msgid "Set up Royal Mail fields."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-admin.php:310
+msgid "Width and height must have the same value when tube is checked."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-rates.php:202
+#. translators: %s is services.
+msgid ""
+"Did not find any corresponding chargeable weight OR valued package is "
+"greater than maximum total cover for services \"%s\""
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-rates.php:317
+#. translators: product item ID
+msgid "Item #%d is not a product. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-rates.php:323
+#. translators: product item ID
+msgid "Product #%d is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail-rates.php:329
+#. translators: product item ID
+msgid "Product #%d is missing weight. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:191
+#: includes/class-wc-shipping-royalmail.php:623
+msgid "Royal Mail"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:194
+#. translators: %1$s is the regular price guide link, %3$s is the online price
+#. guide link, %2$s and %4$s is a closing anchor tag.
+msgid ""
+"Offer Royal Mail shipping rates automatically to your customers. Prices "
+"according to the 2025 %1$sregular price guide%2$s and %3$sonline price "
+"guide%4$s."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:207
+msgid ""
+"This service is only available at select post offices. Please contact your "
+"local branch to inquire about its specific availability."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:299
+msgid "Services"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:302
+msgid "Only available at select post offices"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:305
+msgid "Available at all post offices"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:314
+#: includes/class-wc-shipping-royalmail.php:422
+msgid "Name"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:315
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:316
+msgid "Available on"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:320
+#. translators: currency symbol
+msgid "Price Adjustment (%s)"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:323
+msgid "Price Adjustment (%)"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:389
+msgid "International Parcel Sizes"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:423
+msgid "Length"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:424
+msgid "Width"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:425
+msgid "Height"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:426
+msgid "Weight of Box"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:432
+msgid "Add Box"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:433
+msgid "Remove selected box(es)"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:436
+msgid ""
+"When calculating rates for international mail, items will be packed into "
+"these boxes depending on item dimensions and volume. The boxes will then be "
+"quoted accordingly."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:438
+msgid ""
+"The parcels length, width and depth combined must not be no greater than "
+"900mm. The greatest single dimension must not exceed 600mm"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:602
+msgid "Regular &amp; Online"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:604
+msgid "Regular"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:606
+msgid "Online"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:620
+msgid "Method Title"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:626
+msgid "Rates and Services"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:631
+msgid "Tax Status"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:636
+msgid "Taxable"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:637
+msgid "None"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:641
+msgid "Parcel Packing Method"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:646
+msgid "Default: Pack items individually"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:647
+msgid "Recommended: Pack items into boxes together"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:654
+msgid "Rate Type"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:659
+msgid "Regular prices"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:660
+msgid "Online prices"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:664
+msgid "Offer Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:669
+msgid "Offer the customer all returned rates"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:670
+msgid "Offer the customer the cheapest rate only, anonymously"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:674
+msgid "Ignore Maximum Compensation"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:676
+msgid ""
+"Enabling this will return rates where order amount is greater than what "
+"will be compensated."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:680
+msgid "Ignore Maximum Total Cover for Parcelforce"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:682
+msgid ""
+"Enabling this will return Parcelforce rates even when order amount is "
+"greater than maximum total cover."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:686
+msgid "Enable Additional Compensation"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:688
+msgid ""
+"Enabling this will add an additional fee for increasing compensation value "
+"up to 250 Poundsterling for certain services."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:698
+msgid "Box Packer Library"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:703
+msgid "Speed Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:704
+msgid "Accurate Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:706
+msgid ""
+"Speed Packer packs items by volume, Accurate Packer check each dimension "
+"allowing more accurate packing but might be slow when you sell items in "
+"large quantities."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:709
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:710
+msgid "Enable debug mode"
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:714
+msgid "Enable debug mode to show debugging information on your cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-royalmail.php:819
+#. translators: rates request hash.
+msgid "Rates request: %s"
+msgstr ""
+
+#: rate-extract/rate-extract.php:37
+#. translators: %1$s is a filename.
+msgid "Could not open: %1$s"
+msgstr ""
+
+#: woocommerce-shipping-royalmail.php:73
+#. translators: %s WC download URL link.
+msgid ""
+"Royalmail requires WooCommerce to be installed and active. You can download "
+"%s here."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Royal Mail"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://woocommerce.com/products/royal-mail/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Offer Royal Mail shipping rates automatically to your customers. Prices "
+"according to the 2025 <a target=\"_blank\" "
+"href=\"https://www.royalmail.com/sites/royalmail.com/files/2025-03/our-"
+"prices-april-2025--v1-ta.pdf\">regular price guide</a> and <a "
+"target=\"_blank\" "
+"href=\"https://www.royalmail.com/sites/royalmail.com/files/2025-03/online-"
+"price-guide-april-2025-v1-ta.pdf\">online price guide</a>."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com/"
+msgstr ""

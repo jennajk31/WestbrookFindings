@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "woocommerce-avatax/checkout-order-summary-ecm-links",
+    "version": "1.0.0",
+    "title": "ECM Links",
+    "category": "woocommerce",
+    "parent": [ "woocommerce/checkout-order-summary-block" ],
+    "attributes": {
+        "lock": {
+            "type": "object",
+            "default": {
+                "remove": true,
+                "move": false
+            }
+        }
+    },
+    "textdomain": "ecm-links-block",
+    "editorScript": "file:./build/indexECM.js",
+    "style": [ "file:./build/style-indexECM.css" ]
+}

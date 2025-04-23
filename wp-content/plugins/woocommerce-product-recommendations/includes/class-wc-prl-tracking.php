@@ -1,0 +1,108 @@
+<?php
+/**
+ * WC_PRL_Tracking class
+ *
+ * @package  WooCommerce Product Recommendations
+ * @since    1.0.0
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Tracking class.
+ *
+ * @class    WC_PRL_Tracking
+ * @version  4.0.0
+ */
+class WC_PRL_Tracking {
+
+	/**
+	 * Init.
+	 */
+	public static function init() {
+		add_filter( 'woocommerce_add_cart_item', array( __CLASS__, 'add_long_term_conversion' ) );
+		add_action( 'wp_footer', array( __CLASS__, 'add_dom_helper' ) );
+	}
+
+	/**
+	 * Handles the long-term conversion after inserting into cart from a deployment.
+	 *
+	 * @param  array $cart_item_data
+	 * @return array
+	 */
+	public static function add_long_term_conversion( $cart_item_data ) {
+
+		if ( ! wc_prl_tracking_enabled() ) {
+			return $cart_item_data;
+		}
+
+		// Get product id.
+		$product_id = $cart_item_data['product_id'];
+
+		// Search in local cookie.
+		$cookie              = 'wc_prl_deployments_clicked';
+		$product_ids_clicked = isset( $_COOKIE[ $cookie ] ) && ! empty( $_COOKIE[ $cookie ] ) ? explode( ',', sanitize_text_field( $_COOKIE[ $cookie ] ) ) : array();
+
+		if ( empty( $product_ids_clicked ) ) {
+			return $cart_item_data;
+		}
+
+		foreach ( $product_ids_clicked as $event ) {
+			$attrs = explode( '_', $event );
+
+			if ( ! isset( $attrs[1] ) || absint( $attrs[1] ) !== $product_id ) {
+				continue;
+			}
+
+			$cart_item_data['_prl_conversion']      = absint( $attrs[0] ); // Deployment ID.
+			$cart_item_data['_prl_conversion_time'] = time();
+
+			if ( isset( $attrs[2] ) ) {
+				$cart_item_data['_prl_conversion_source_hash'] = $attrs[2];
+			}
+
+			break;
+		}
+
+		return $cart_item_data;
+	}
+
+	/**
+	 * Add tracking data DOM helper.
+	 *
+	 * @since  3.0.0
+	 *
+	 * @param  array $classes
+	 * @return void
+	 */
+	public static function add_dom_helper() {
+
+		if ( is_admin() ) {
+			return;
+		}
+
+		global $product;
+
+		if ( ! $product || ! is_a( $product, 'WC_Product' ) ) {
+			return;
+		}
+
+		$classes    = array();
+		$categories = $product->get_category_ids();
+		if ( ! empty( $categories ) ) {
+			$classes[] = 'wc-prl-cat-' . implode( '-', $categories );
+		}
+
+		$tags = $product->get_tag_ids();
+		if ( ! empty( $tags ) ) {
+			$classes[] = 'wc-prl-tag-' . implode( '-', $tags );
+		}
+
+		echo wp_kses_post( sprintf( '<div id="wc-prl-recommendations-tracking-data" data-product-id="%d" class="%s"></div>', absint( $product->get_id() ), esc_attr( implode( ' ', (array) $classes ) ) ) );
+	}
+}
+
+WC_PRL_Tracking::init();

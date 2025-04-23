@@ -1,0 +1,617 @@
+# Copyright (C) 2025 WooCommerce
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Canada Post Shipping 3.1.1\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/woocommerce-shipping-canada-post\n"
+"POT-Creation-Date: 2025-04-07 20:23:46+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: includes/class-wc-shipping-canada-post-init.php:90
+#. translators: %s is a WooCommerce general settings URL.
+msgid ""
+"Canada Post requires that the <a href=\"%s\">currency</a> is set to "
+"Canadian Dollars."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:98
+#. translators: %s is a WooCommerce general settings URL.
+msgid ""
+"Canada Post requires that the <a href=\"%s\">base country/region</a> is set "
+"to Canada."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:122
+msgid "Connect your Canada Post Account"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:123
+msgid ""
+"Before you can start using Canada Post you need to register for an account, "
+"or connect an existing one."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:126
+msgid "Register/Connect"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:169
+msgid "The link you followed has expired. Please refresh the page and try again."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:186
+msgid "The link you followed has expired."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:190
+msgid "Insufficient privileges to change plugin settings."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:196
+msgid ""
+"The Canada Post extension will be unable to get quotes on your behalf until "
+"you accept the terms and conditons."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:225
+msgid "Unable to get merchant info - please try again later."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:229
+msgid "Unable to get registration token - please try again later."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:237
+msgid "Invalid Response"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:294
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:295
+msgid "Support"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:296
+msgid "Docs"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:307
+#. translators: %s is an anchor element with WooCommerce site link.
+msgid "WooCommerce Canada Post Shipping requires %s to be installed and active."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-init.php:365
+#. translators: %1$s is anchor element opener and %2$s is anchor element
+#. closer.
+msgid ""
+"Canada Post now supports shipping zones. The zone settings were added to a "
+"new Canada Post method on the \"Rest of the World\" Zone. See the zones "
+"%1$shere%2$s "
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-privacy.php:24
+#: includes/class-wc-shipping-canada-post.php:436
+#: includes/class-wc-shipping-canada-post.php:977
+msgid "Canada Post"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post-privacy.php:32
+#. translators: %s is a canada post plugin documentation URL.
+msgid ""
+"By using this extension, you may be storing personal data or sharing data "
+"with an external service. <a href=\"%s\" target=\"_blank\">Learn more about "
+"how this works, including what you may want to include in your privacy "
+"policy.</a>"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:408
+msgid "Regular Parcel"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:409
+msgid "Expedited Parcel"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:410
+msgid "Xpresspost"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:411
+msgid "Priority"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:412
+msgid "Library Books"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:413
+msgid "Expedited Parcel USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:414
+msgid "Tracked Packet USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:415
+msgid "Tracked Packet USA (LVM)"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:416
+msgid "Priority Worldwide Envelope USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:417
+msgid "Priority Worldwide pak USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:418
+msgid "Priority Worldwide Parcel USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:419
+msgid "Small Packet USA Air"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:420
+msgid "Small Packet USA Air (LVM)"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:421
+msgid "Small Packet USA Surface"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:422
+msgid "Xpresspost USA"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:423
+msgid "Xpresspost International"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:424
+msgid "International Tracked Packet"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:425
+msgid "International Parcel Air"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:426
+msgid "International Parcel Surface"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:427
+msgid "Priority Worldwide Envelope International"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:428
+msgid "Priority Worldwide pak International"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:429
+msgid "Priority Worldwide parcel International"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:430
+msgid "Small Packet International Air"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:431
+msgid "Small Packet International Surface"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:437
+msgid ""
+"The Canada Post extension obtains rates dynamically from the Canada Post "
+"API during cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:604
+#. translators: %1$s is a Canada post customer number and %2$s is a URL to
+#. disconnect the account.
+msgid ""
+"The account <code>%1$s</code> is currently connected - to disconnect this "
+"account <a href=\"%2$s\">click here</a>."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:632
+msgid "Services"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:637
+msgid "Service Code"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:638
+#: includes/class-wc-shipping-canada-post.php:739
+msgid "Name"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:639
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:643
+#. translators: %s is a WooCommerce currency symbol.
+msgid "Price Adjustment (%s)"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:646
+msgid "Price Adjustment (%)"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:702
+msgid "Box Sizes"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:740
+msgid "Outer Length"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:741
+msgid "Outer Width"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:742
+msgid "Outer Height"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:743
+msgid "Inner Length"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:744
+msgid "Inner Width"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:745
+msgid "Inner Height"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:747
+msgid "Weight of Box"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:748
+msgid ""
+"Weight of the actual box and will be added to the weight of the contents. "
+"This will increase the cost of shipping."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:751
+msgid "Max Weight"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:752
+msgid ""
+"Maximum weight your box can hold. This includes contents weight and box "
+"weight."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:759
+msgid "Add Box"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:760
+msgid "Remove selected box(es)"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:763
+msgid ""
+"Items will be packed into these boxes depending based on item dimensions "
+"and volume. Outer dimensions will be passed to Canada Post, whereas inner "
+"dimensions will be used for packing. Items not fitting into boxes will be "
+"packed individually."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:974
+msgid "Method Title"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:976
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:981
+msgid "Origin Postcode"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:983
+msgid "Enter the postcode for the <strong>sender</strong>."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:988
+msgid "Quote Type"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:992
+msgid "Commercial - Discounted customer or VentureOne member rates."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:993
+msgid "Counter -  Regular price paid by consumers."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:997
+msgid "Rate Cost"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1001
+msgid "Use \"Due\" cost - cost after taxes"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1002
+msgid "Use \"Base\" cost - base cost for the rate"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1006
+msgid "Flat Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1010
+msgid "Yes - Enable flat rate services"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1011
+msgid "No - Disable flat rate services"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1015
+#. translators: %1$s is an anchor element opener, %2$s is a anchor element
+#. closer, %3$s is a break element.
+msgid ""
+"Enable this option to offer shipping using %1$sCanada Post Flat Rate "
+"services%2$s. %3$sItems will be packed into flat rate boxes and the "
+"customer will be offered a single rate from these."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1023
+msgid "Flat Rate Title"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1027
+msgid "Flat Rate"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1030
+msgid "Lettermail Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1035
+msgid ""
+"Lettermail rates are hardcoded into the plugin as they are not part of the "
+"API."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1037
+msgid "Standard Lettermail"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1038
+msgid "Registered Lettermail"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1043
+msgid "Additional Options"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1049
+msgid "Coverage"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1050
+msgid "Proof of Age Required"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1051
+msgid "Signature"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1052
+msgid "Mailing Tube"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1054
+msgid "Additional options affect all rates."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1058
+msgid "Delivery time"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1059
+msgid "Show estimated delivery time next to rate name."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1062
+msgid "Rates will be labelled, for example, Rate Name - approx. 2 days."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1065
+msgid "Delivery Delay"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1068
+msgid ""
+"If showing delivery time, allow for a delay. e.g. a delay of 1 day for a "
+"method which ships in 2 days would be labelled: approx. 2-3 days"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1072
+msgid "Parcel Packing Method"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1077
+msgid "Default: Pack items individually"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1078
+msgid "Weight of all items"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1079
+msgid "Recommended: Pack into boxes with weights and dimensions"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1083
+msgid "Maximum weight"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1086
+msgid "Maximum weight per package."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1096
+msgid "Offer Rates"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1101
+msgid "Offer the customer all returned rates"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1102
+msgid "Offer the customer the cheapest rate only, anonymously"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1112
+msgid "Box Packer Library"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1117
+msgid "Speed Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1118
+msgid "Accurate Packer"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1120
+msgid ""
+"Speed Packer packs items by volume, Accurate Packer check each dimension "
+"allowing more accurate packing but might be slow when you sell items in "
+"large quantities."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1123
+msgid "Debug Mode"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1124
+msgid "Enable debug mode"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1127
+msgid "Enable debug mode to show debugging information on the cart/checkout."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1164
+msgid ""
+"Canada Post debug mode is enabled. To hide these messages, turn off debug "
+"mode in the settings."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1169
+msgid ""
+"Postal code or country field is empty. Canada Post shipping calculation is "
+"aborted."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1296
+#. translators: %1$d is a transmit time, %2$d is a transmit time with delivery
+#. time delay.
+msgid "approx. %1$d&ndash;%2$d days"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1299
+#. translators: %d is a transmit time.
+msgid "approx. %d day"
+msgid_plural "approx. %d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-shipping-canada-post.php:1309
+msgid ""
+"Invalid request. Ensure a valid shipping destination has been chosen on the "
+"cart/checkout page."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1433
+#: includes/class-wc-shipping-canada-post.php:1435
+#: includes/class-wc-shipping-canada-post.php:1537
+#: includes/class-wc-shipping-canada-post.php:1539
+msgid "Product # is missing dimensions! Using 1x1x1."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1490
+msgid "Lettermail&trade;"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1490
+msgid "Registered"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1816
+#: includes/class-wc-shipping-canada-post.php:1997
+#. translators: %d is cart item ID.
+msgid "Product #%d is virtual. Skipping."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1822
+#: includes/class-wc-shipping-canada-post.php:1900
+#. translators: %d is cart item ID.
+msgid "Product #%d is missing weight. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1894
+#. translators: %d is cart item ID.
+msgid "Product #%d is missing virtual. Aborting."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:1936
+msgid "Package is too heavy. Splitting."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:2015
+msgid ""
+"Canada post error: Product missing dimensions or weight. Abort box packing "
+"calculation."
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:2110
+#. translators: %1$s is package index.
+msgid "Package %1$s"
+msgstr ""
+
+#: includes/class-wc-shipping-canada-post.php:2123
+#. translators: %1$s is a box dimension, %2$s is a parcel weight.
+msgid "%1$s (cm) %2$skg"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Canada Post Shipping"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://woocommerce.com/products/canada-post-shipping-method/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Obtain shipping rates dynamically via the Canada Post API for your orders."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooCommerce"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://woocommerce.com"
+msgstr ""

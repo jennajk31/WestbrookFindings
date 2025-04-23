@@ -1,0 +1,237 @@
+# Copyright (C) 2022 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tazza 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/tazza\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-24T01:14:48+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: tazza\n"
+
+#. Theme Name of the theme
+msgid "Tazza"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://github.com/Automattic/theme-tazza"
+msgstr ""
+
+#. Description of the theme
+msgid "Tazza puts the spotlight on your products and your customers. This theme leverages Woo Commerce to provide you with intuitive product navigation and the patterns you need to master digital merchandising."
+msgstr ""
+
+#. Author of the theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://automattic.com/"
+msgstr ""
+
+#: patterns/featured-product-categories.php:12
+msgid "Shop Teas"
+msgstr ""
+
+#: patterns/featured-product-categories.php:16
+msgid "Shop All Categories"
+msgstr ""
+
+#: patterns/featured-product-categories.php:27
+msgid "Herbal teas"
+msgstr ""
+
+#: patterns/featured-product-categories.php:31
+#: patterns/featured-product-categories.php:45
+#: patterns/featured-product-categories.php:59
+msgid "Explore category"
+msgstr ""
+
+#: patterns/featured-product-categories.php:41
+msgid "Black teas"
+msgstr ""
+
+#: patterns/featured-product-categories.php:55
+msgid "Floral blends"
+msgstr ""
+
+#: patterns/featured-product.php:14
+msgid "Rooibos Loose Leaf Tea"
+msgstr ""
+
+#: patterns/featured-product.php:18
+msgid "Try this naturally caffeine-free tea any time of the day or night. It&rsquo;s loaded with antioxidants and minerals to boot!"
+msgstr ""
+
+#: patterns/featured-product.php:23
+msgid "Add to Cart"
+msgstr ""
+
+#: patterns/footer.php:15
+msgid "123 Example St, San Francisco,<br>CA 12345-6789"
+msgstr ""
+
+#: patterns/footer.php:19
+msgid "contact@example.com"
+msgstr ""
+
+#: patterns/footer.php:19
+msgid "0123-456-7890"
+msgstr ""
+
+#: patterns/footer.php:25
+msgid "Quick Links"
+msgstr ""
+
+#: patterns/footer.php:29
+msgid "About Us"
+msgstr ""
+
+#: patterns/footer.php:33
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer.php:37
+msgid "Shipping"
+msgstr ""
+
+#: patterns/footer.php:41
+msgid "Returns"
+msgstr ""
+
+#: patterns/footer.php:47
+msgid "Shop"
+msgstr ""
+
+#: patterns/footer.php:51
+msgid "New Arrivals"
+msgstr ""
+
+#: patterns/footer.php:55
+msgid "Bestsellers"
+msgstr ""
+
+#: patterns/footer.php:59
+msgid "Collections"
+msgstr ""
+
+#: patterns/footer.php:65
+msgid "Follow Us"
+msgstr ""
+
+#: patterns/footer.php:69
+msgid "Facebook"
+msgstr ""
+
+#: patterns/footer.php:73
+msgid "Instagram"
+msgstr ""
+
+#: patterns/footer.php:77
+msgid "Pinterest"
+msgstr ""
+
+#. Translators: WordPress.com link.
+#: patterns/footer.php:93
+msgid "Designed with %s"
+msgstr ""
+
+#: patterns/footer.php:94
+msgid "https://wordpress.com"
+msgstr ""
+
+#: patterns/hidden-404.php:10
+msgctxt "Error code for a webpage that is not found."
+msgid "404"
+msgstr ""
+
+#: patterns/hidden-404.php:14
+msgid "This page could not be found. Maybe try a search?"
+msgstr ""
+
+#: patterns/hidden-404.php:17
+msgid "Search"
+msgstr ""
+
+#: patterns/home-hero.php:18
+msgid "Our collection of fall tea flavors for autumn"
+msgstr ""
+
+#: patterns/home-hero.php:21
+msgid "There&rsquo;s no better way to relax than to sit down with a cozy blanket and a mug of hot tea. Check our collection for new flavors to try this fall."
+msgstr ""
+
+#: patterns/home-hero.php:27
+msgid "Shop Now"
+msgstr ""
+
+#: patterns/notice.php:11
+msgid "Free shipping on all orders over $100."
+msgstr ""
+
+#: patterns/product-new-arrivals.php:12
+msgid "Shop New Arrivals"
+msgstr ""
+
+#: patterns/product-new-arrivals.php:16
+msgid "Shop all new arrivals"
+msgstr ""
+
+#: patterns/shop-cta.php:20
+msgid "Shop accessories"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Source Serif Pro"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""

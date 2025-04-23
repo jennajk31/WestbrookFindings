@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress.com - Themes - Tazza\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-03T01:15:43+00:00\n"
+"PO-Revision-Date: 2022-12-02 09:17:39+0000\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Background"
+msgstr "Fundal"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr "Principală"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr "Secundară"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr "Terță"
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Blank"
+msgstr "Pagină goală"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr "Antet"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr "Subsol"
+
+#: patterns/home-hero.php:27
+msgid "Shop Now"
+msgstr "Cumpără acum"
+
+#: patterns/notice.php:11
+msgid "Free shipping on all orders over $100."
+msgstr "Livrare gratuită pentru toate comenzile de peste 100 $."
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Font"
+msgstr "System Font"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Source Serif Pro"
+msgstr "Source Serif Pro"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Foreground"
+msgstr "Prim-plan"
+
+#: patterns/product-new-arrivals.php:12
+msgid "Shop New Arrivals"
+msgstr "Cumpără produse noi"
+
+#: patterns/product-new-arrivals.php:16
+msgid "Shop all new arrivals"
+msgstr "Cumpără toate produsele noi"
+
+#: patterns/home-hero.php:18
+msgid "Our collection of fall tea flavors for autumn"
+msgstr "Colecția noastră de toamnă cu arome de ceai de sezon"
+
+#: patterns/shop-cta.php:20
+msgid "Shop accessories"
+msgstr "Cumpără accesorii"
+
+#: patterns/footer.php:77
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#. Translators: WordPress.com link.
+#: patterns/footer.php:93
+msgid "Designed with %s"
+msgstr "Proiectată cu %s"
+
+#: patterns/footer.php:94
+msgid "https://wordpress.com"
+msgstr "https://wordpress.com"
+
+#: patterns/hidden-404.php:10
+msgctxt "Error code for a webpage that is not found."
+msgid "404"
+msgstr "404"
+
+#: patterns/hidden-404.php:14
+msgid "This page could not be found. Maybe try a search?"
+msgstr "Nu am putut găsi această pagină. Poate încerci o căutare?"
+
+#: patterns/hidden-404.php:17
+msgid "Search"
+msgstr "Caută"
+
+#: patterns/footer.php:47
+msgid "Shop"
+msgstr "Cumpără"
+
+#: patterns/footer.php:65
+msgid "Follow Us"
+msgstr "Urmărește-ne"
+
+#: patterns/footer.php:69
+msgid "Facebook"
+msgstr "Facebook"
+
+#: patterns/footer.php:73
+msgid "Instagram"
+msgstr "Instagram"
+
+#: patterns/footer.php:59
+msgid "Collections"
+msgstr "Colecții"
+
+#: patterns/footer.php:51
+msgid "New Arrivals"
+msgstr "Produse noi"
+
+#: patterns/footer.php:55
+msgid "Bestsellers"
+msgstr "Vândute cu succes"
+
+#: patterns/footer.php:33
+msgid "Contact"
+msgstr "contact"
+
+#: patterns/footer.php:37
+msgid "Shipping"
+msgstr "Livrare"
+
+#: patterns/footer.php:41
+msgid "Returns"
+msgstr "Returnări"
+
+#: patterns/featured-product.php:23
+msgid "Add to Cart"
+msgstr "Adaugă în coș"
+
+#: patterns/footer.php:19
+msgid "contact@example.com"
+msgstr "contact@exemplu.com"
+
+#: patterns/footer.php:19
+msgid "0123-456-7890"
+msgstr "0123-456-7890"
+
+#: patterns/footer.php:25
+msgid "Quick Links"
+msgstr "Legături rapide"
+
+#: patterns/footer.php:29
+msgid "About Us"
+msgstr "Despre noi"
+
+#: patterns/featured-product-categories.php:55
+msgid "Floral blends"
+msgstr "Amestecuri florale"
+
+#: patterns/featured-product-categories.php:41
+msgid "Black teas"
+msgstr "Ceaiuri negre"
+
+#: patterns/featured-product-categories.php:31
+#: patterns/featured-product-categories.php:45
+#: patterns/featured-product-categories.php:59
+msgid "Explore category"
+msgstr "Explorează categoriile"
+
+#: patterns/featured-product-categories.php:27
+msgid "Herbal teas"
+msgstr "Ceaiuri din plante"
+
+#: patterns/featured-product-categories.php:16
+msgid "Shop All Categories"
+msgstr "Cumpără din toate categoriile"
+
+#: patterns/featured-product-categories.php:12
+msgid "Shop Teas"
+msgstr "Cumpără ceaiuri"
+
+#. Description of the theme
+msgid "Tazza puts the spotlight on your products and your customers. This theme leverages Woo Commerce to provide you with intuitive product navigation and the patterns you need to master digital merchandising."
+msgstr "Tazza pune în centrul atenției produsele tale și clienții tăi. Această temă folosește și profită de WooCommerce pentru a-ți oferi o navigare intuitivă în produsele și modelele de care ai nevoie ca să stăpânești comercializarea digitală."
+
+#. Author of the theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Author URI of the theme
+msgid "https://automattic.com/"
+msgstr "https://automattic.com/"
+
+#. Theme URI of the theme
+msgid "https://github.com/Automattic/theme-tazza"
+msgstr "https://github.com/Automattic/theme-tazza"
+
+#. Theme Name of the theme
+msgid "Tazza"
+msgstr "Tazza"

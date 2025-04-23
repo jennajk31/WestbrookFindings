@@ -1,0 +1,539 @@
+{
+    "settings": {
+        "options": {
+            "show_on_front": "posts",
+            "featured-content": false,
+            "jetpack_global_styles": false
+        },
+        "theme_mods": {
+            "0": false,
+            "nav_menu_locations": [],
+            "custom_css_post_id": -1
+        },
+        "headstart": {
+            "mapped_id_options": [],
+            "mapped_id_theme_mods": [],
+            "keep_submenu_items": true
+        }
+    },
+    "widgets": [],
+    "content": [
+        {
+            "post_type": "page",
+            "post_title": "Blog",
+            "post_content": "<!-- wp:group {\"tagName\":\"main\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"var:preset|spacing|80\",\"bottom\":\"var:preset|spacing|80\"}}},\"layout\":{\"inherit\":true,\"type\":\"constrained\"}} -->\n<main class=\"wp-block-group\" style=\"margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80)\"><!-- wp:group {\"align\":\"full\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"0px\",\"bottom\":\"0px\"}}},\"layout\":{\"inherit\":true,\"type\":\"constrained\"}} -->\n<div class=\"wp-block-group alignfull\" style=\"margin-top:0px;margin-bottom:0px\"><!-- wp:query {\"queryId\":0,\"query\":{\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":false,\"perPage\":10},\"displayLayout\":{\"type\":\"list\"},\"align\":\"wide\",\"layout\":{\"inherit\":true}} -->\n<div class=\"wp-block-query alignwide\"><!-- wp:post-template {\"align\":\"wide\"} -->\n<!-- wp:post-title {\"textAlign\":\"left\",\"isLink\":true,\"align\":\"wide\",\"fontSize\":\"var(\\u002d\\u002dwp\\u002d\\u002dcustom\\u002d\\u002dtypography\\u002d\\u002dfont-size\\u002d\\u002dhuge, clamp(2.25rem, 4vw, 2.75rem))\"} \/-->\n\n<!-- wp:post-featured-image {\"isLink\":true,\"align\":\"wide\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"calc(1.75 * var(\\u002d\\u002dwp\\u002d\\u002dstyle\\u002d\\u002dblock-gap))\"}}}} \/-->\n\n<!-- wp:columns {\"align\":\"wide\",\"style\":{\"spacing\":{\"margin\":{\"bottom\":\"var(\\u002d\\u002dwp\\u002d\\u002dcustom\\u002d\\u002dspacing\\u002d\\u002dsmall, 6rem)\"}}}} -->\n<div class=\"wp-block-columns alignwide\" style=\"margin-bottom:var(--wp--custom--spacing--small, 6rem)\"><!-- wp:column {\"width\":\"650px\"} -->\n<div class=\"wp-block-column\" style=\"flex-basis:650px\"><!-- wp:post-excerpt \/-->\n\n<!-- wp:post-date {\"format\":\"F j, Y\",\"isLink\":true,\"style\":{\"typography\":{\"fontStyle\":\"italic\",\"fontWeight\":\"400\"}},\"fontSize\":\"small\"} \/--><\/div>\n<!-- \/wp:column -->\n\n<!-- wp:column {\"width\":\"\"} -->\n<div class=\"wp-block-column\"><\/div>\n<!-- \/wp:column --><\/div>\n<!-- \/wp:columns -->\n\n<!-- wp:spacer {\"height\":\"3px\"} -->\n<div style=\"height:3px\" aria-hidden=\"true\" class=\"wp-block-spacer\"><\/div>\n<!-- \/wp:spacer -->\n\n<!-- wp:separator {\"opacity\":\"css\",\"align\":\"wide\",\"className\":\"is-style-wide\"} -->\n<hr class=\"wp-block-separator alignwide has-css-opacity is-style-wide\"\/>\n<!-- \/wp:separator -->\n<!-- \/wp:post-template -->\n\n<!-- wp:query-pagination {\"paginationArrow\":\"arrow\",\"align\":\"wide\",\"layout\":{\"type\":\"flex\",\"justifyContent\":\"space-between\"}} -->\n<!-- wp:query-pagination-previous {\"fontSize\":\"small\"} \/-->\n\n<!-- wp:query-pagination-numbers \/-->\n\n<!-- wp:query-pagination-next {\"fontSize\":\"small\"} \/-->\n<!-- \/wp:query-pagination --><\/div>\n<!-- \/wp:query --><\/div>\n<!-- \/wp:group --><\/main>\n<!-- \/wp:group -->",
+            "post_name": "blog",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 140,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "post",
+            "post_title": "How to make a chai latte?",
+            "post_content": "<!-- wp:paragraph -->\n<p>The word 'chai' comes from the Hindu word for tea. A chai latte is a drink made out of black tea of choice, spice blend, sweetener, and hot milk.<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3>How to make a chai latte at home?<\/h3>\n<!-- \/wp:heading -->\n\n<!-- wp:paragraph -->\n<p>To brew the perfect chai latte at home, you'll need:<\/p>\n<!-- \/wp:paragraph -->\n\n<!-- wp:list -->\n<ul><!-- wp:list-item -->\n<li>loose-leaf black tea of choice (for example Assam, Ceylon, English Breakfast).<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>spices - cinnamon, cardamom, cloves, peppercorns.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>favorite milk - dairy or plant-based.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>sweetener - honey, maple syrup, or sugar.<\/li>\n<!-- \/wp:list-item --><\/ul>\n<!-- \/wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3>Method<\/h3>\n<!-- \/wp:heading -->\n\n<!-- wp:list {\"ordered\":true} -->\n<ol><!-- wp:list-item -->\n<li>Toast the spices in a small saucepan over medium heat.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Add water, and bring to a simmer.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Remove the saucepan from the heat and add the tea leaves. Cover and steep for about 10 minutes.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Add the sweetener and stir until dissolved.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Heat up and froth the milk using a milk frother.<\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Pour 3\/4 cup of the warm tea into a cup. Add 1\/2 cup of warmed milk and stir to combine. <\/li>\n<!-- \/wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Top with a spoonful of milk froth.<\/li>\n<!-- \/wp:list-item --><\/ol>\n<!-- \/wp:list -->",
+            "post_name": "how-to-make-a-chai-latte",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 129,
+            "hs_post_parent": 0,
+            "hs_taxonomies": {
+                "category_name": [
+                    "Uncategorized"
+                ],
+                "post_tag_name": []
+            },
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/blackieshoot-hlgKiC9t4N8-unsplash.jpg"
+        },
+        {
+            "post_type": "product",
+            "post_title": "Loose Leaf Rooibos Tea",
+            "post_content": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.",
+            "post_name": "loose-leaf-rooibos-tea",
+            "post_excerpt": "Nulla vitae elit libero, a pharetra augue.",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 119,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-PkE5FkbMNYo-unsplash-1.jpg",
+            "hs_post_meta": {
+                "_backorders": "no",
+                "_download_expiry": "0",
+                "_download_limit": "0",
+                "_downloadable": "no",
+                "_manage_stock": "no",
+                "_price": "20",
+                "_product_version": "7.0.0",
+                "_regular_price": "20",
+                "_sold_individually": "no",
+                "_stock": null,
+                "_stock_status": "instock",
+                "_tax_class": "",
+                "_tax_status": "taxable",
+                "_virtual": "no",
+                "_wc_average_rating": "0",
+                "_wc_review_count": "0",
+                "_wp_old_slug": [
+                    "import-placeholder-for-148",
+                    "product-art-poster"
+                ],
+                "total_sales": "0"
+            }
+        },
+        {
+            "post_type": "product",
+            "post_title": "Green Jasmine Tea",
+            "post_content": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.",
+            "post_name": "green-jasmine-tea",
+            "post_excerpt": "Nulla vitae elit libero, a pharetra augue.",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 120,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-qp-OgHQv5h8-unsplash-1.jpg",
+            "hs_post_meta": {
+                "_backorders": "no",
+                "_download_expiry": "0",
+                "_download_limit": "0",
+                "_downloadable": "no",
+                "_manage_stock": "no",
+                "_price": "20",
+                "_product_version": "7.0.0",
+                "_regular_price": "20",
+                "_sold_individually": "no",
+                "_stock": null,
+                "_stock_status": "instock",
+                "_tax_class": "",
+                "_tax_status": "taxable",
+                "_virtual": "no",
+                "_wc_average_rating": "0",
+                "_wc_review_count": "0",
+                "_wp_old_slug": [
+                    "import-placeholder-for-149",
+                    "product-art-poster-2"
+                ],
+                "total_sales": "0"
+            }
+        },
+        {
+            "post_type": "product",
+            "post_title": "Rooibos Tea Teabags",
+            "post_content": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.",
+            "post_name": "rooibos-tea-teabags",
+            "post_excerpt": "Nulla vitae elit libero, a pharetra augue.",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 121,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-PkE5FkbMNYo-unsplash-1.jpg",
+            "hs_post_meta": {
+                "_backorders": "no",
+                "_download_expiry": "0",
+                "_download_limit": "0",
+                "_downloadable": "no",
+                "_manage_stock": "no",
+                "_price": "20",
+                "_product_version": "7.0.0",
+                "_regular_price": "20",
+                "_sold_individually": "no",
+                "_stock": null,
+                "_stock_status": "instock",
+                "_tax_class": "",
+                "_tax_status": "taxable",
+                "_virtual": "no",
+                "_wc_average_rating": "0",
+                "_wc_review_count": "0",
+                "_wp_old_slug": [
+                    "import-placeholder-for-150",
+                    "product-art-poster-3"
+                ],
+                "total_sales": "0"
+            }
+        },
+        {
+            "post_type": "product",
+            "post_title": "Green Tea Loose Leaf",
+            "post_content": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.",
+            "post_name": "green-tea-loose-leaf",
+            "post_excerpt": "Nulla vitae elit libero, a pharetra augue.",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "open",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 122,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra",
+            "attachment_url": "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-qp-OgHQv5h8-unsplash-1.jpg",
+            "hs_post_meta": {
+                "_backorders": "no",
+                "_download_expiry": "0",
+                "_download_limit": "0",
+                "_downloadable": "no",
+                "_manage_stock": "no",
+                "_price": "20",
+                "_product_version": "7.0.0",
+                "_regular_price": "20",
+                "_sold_individually": "no",
+                "_stock": null,
+                "_stock_status": "instock",
+                "_tax_class": "",
+                "_tax_status": "taxable",
+                "_virtual": "no",
+                "_wc_average_rating": "0",
+                "_wc_review_count": "0",
+                "_wp_old_slug": [
+                    "import-placeholder-for-151",
+                    "product-art-poster-4"
+                ],
+                "total_sales": "0"
+            }
+        },
+        {
+            "post_type": "page",
+            "post_title": "Shop",
+            "post_content": "",
+            "post_name": "shop",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 111,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Cart",
+            "post_content": "<!-- wp:shortcode -->[woocommerce_cart]<!-- \/wp:shortcode -->",
+            "post_name": "cart",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 112,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "Checkout",
+            "post_content": "<!-- wp:shortcode -->[woocommerce_checkout]<!-- \/wp:shortcode -->",
+            "post_name": "checkout",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 113,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "page",
+            "post_title": "My account",
+            "post_content": "<!-- wp:shortcode -->[woocommerce_my_account]<!-- \/wp:shortcode -->",
+            "post_name": "my-account",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 114,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        },
+        {
+            "post_type": "wp_navigation",
+            "post_title": "Primary",
+            "post_content": "<!-- wp:navigation-link {\"label\":\"Home\",\"type\":\"custom\",\"url\":\"\/\",\"kind\":\"custom\",\"isTopLevelLink\":true} \/-->\n\n<!-- wp:navigation-link {\"label\":\"Shop\",\"type\":\"page\",\"id\":111,\"url\":\"https:\/\/tazzademo.wpcomstaging.com\/shop\/\",\"kind\":\"post-type\",\"isTopLevelLink\":true} \/-->\n\n<!-- wp:navigation-link {\"label\":\"Blog\",\"type\":\"page\",\"id\":140,\"url\":\"https:\/\/tazzademo.wpcomstaging.com\/?page_id=140\",\"kind\":\"post-type\",\"isTopLevelLink\":true} \/-->\n\n<!-- wp:navigation-link {\"label\":\"My account\",\"type\":\"page\",\"id\":114,\"url\":\"https:\/\/tazzademo.wpcomstaging.com\/my-account\/\",\"kind\":\"post-type\",\"isTopLevelLink\":true} \/-->",
+            "post_name": "primary",
+            "post_excerpt": "",
+            "menu_order": 0,
+            "post_status": "publish",
+            "comment_status": "closed",
+            "ping_status": "closed",
+            "_starter_page_template": "",
+            "hs_old_id": 139,
+            "hs_post_parent": 0,
+            "hs_taxonomies": [],
+            "hs_custom_meta": "_hs_extra"
+        }
+    ],
+    "menus": [],
+    "images": [
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-qp-OgHQv5h8-unsplash-1.jpg",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-PkE5FkbMNYo-unsplash-1.jpg",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/blackieshoot-hlgKiC9t4N8-unsplash.jpg",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/woocommerce-placeholder.png",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-qp-OgHQv5h8-unsplash.jpg",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/2022\/10\/teacora-rooibos-PkE5FkbMNYo-unsplash.jpg",
+        "https:\/\/tazzademo.wpcomstaging.com\/wp-content\/uploads\/woocommerce-placeholder.png"
+    ],
+    "meta": {
+        "blog_id": 1,
+        "url": "https:\/\/tazzademo.wpcomstaging.com",
+        "update_date": "November 23, 2022, 5:23 pm",
+        "update_timestamp": 1669224203
+    },
+    "custom_terms_by_taxonomy": {
+        "product_type": [
+            {
+                "term_id": 50518537,
+                "name": "external",
+                "slug": "external",
+                "term_group": 0,
+                "term_taxonomy_id": 10,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518535,
+                "name": "grouped",
+                "slug": "grouped",
+                "term_group": 0,
+                "term_taxonomy_id": 8,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518534,
+                "name": "simple",
+                "slug": "simple",
+                "term_group": 0,
+                "term_taxonomy_id": 7,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 4,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518548,
+                "name": "subscription",
+                "slug": "subscription",
+                "term_group": 0,
+                "term_taxonomy_id": 21,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518536,
+                "name": "variable",
+                "slug": "variable",
+                "term_group": 0,
+                "term_taxonomy_id": 9,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518549,
+                "name": "Variable Subscription",
+                "slug": "variable-subscription",
+                "term_group": 0,
+                "term_taxonomy_id": 22,
+                "taxonomy": "product_type",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            }
+        ],
+        "product_visibility": [
+            {
+                "term_id": 50518539,
+                "name": "exclude-from-catalog",
+                "slug": "exclude-from-catalog",
+                "term_group": 0,
+                "term_taxonomy_id": 12,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518538,
+                "name": "exclude-from-search",
+                "slug": "exclude-from-search",
+                "term_group": 0,
+                "term_taxonomy_id": 11,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518540,
+                "name": "featured",
+                "slug": "featured",
+                "term_group": 0,
+                "term_taxonomy_id": 13,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518541,
+                "name": "outofstock",
+                "slug": "outofstock",
+                "term_group": 0,
+                "term_taxonomy_id": 14,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518542,
+                "name": "rated-1",
+                "slug": "rated-1",
+                "term_group": 0,
+                "term_taxonomy_id": 15,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518543,
+                "name": "rated-2",
+                "slug": "rated-2",
+                "term_group": 0,
+                "term_taxonomy_id": 16,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518544,
+                "name": "rated-3",
+                "slug": "rated-3",
+                "term_group": 0,
+                "term_taxonomy_id": 17,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518545,
+                "name": "rated-4",
+                "slug": "rated-4",
+                "term_group": 0,
+                "term_taxonomy_id": 18,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            },
+            {
+                "term_id": 50518546,
+                "name": "rated-5",
+                "slug": "rated-5",
+                "term_group": 0,
+                "term_taxonomy_id": 19,
+                "taxonomy": "product_visibility",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            }
+        ],
+        "product_cat": [
+            {
+                "term_id": 50518547,
+                "name": "Uncategorized",
+                "slug": "uncategorized",
+                "term_group": 0,
+                "term_taxonomy_id": 20,
+                "taxonomy": "product_cat",
+                "description": "",
+                "parent": 0,
+                "count": 0,
+                "filter": "raw"
+            }
+        ]
+    },
+    "custom_term_meta": [],
+    "custom_term_assignments": {
+        "122": {
+            "product_type": [
+                "simple"
+            ]
+        },
+        "121": {
+            "product_type": [
+                "simple"
+            ]
+        },
+        "120": {
+            "product_type": [
+                "simple"
+            ]
+        },
+        "119": {
+            "product_type": [
+                "simple"
+            ]
+        }
+    }
+}
