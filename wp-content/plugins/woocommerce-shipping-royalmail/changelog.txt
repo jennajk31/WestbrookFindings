@@ -1,0 +1,323 @@
+*** Royal Mail ***
+
+2025-04-15 - version 3.5.3
+* Fix   - Incorrect International Tracked and Tracked&Signed rates.
+
+2025-04-07 - version 3.5.2
+* Tweak - WooCommerce 9.8 Compatibility.
+
+2025-03-28 - version 3.5.1
+* Update - April 2025 regular and online pricing changes.
+
+2025-03-10 - version 3.5.0
+* Add - New box packer with setting option for box packer library selection.
+
+2025-03-04 - version 3.4.5
+* Fix - Parcelforce Global Express EU rates.
+
+2025-02-19 - version 3.4.4
+* Add   - Parcelforce online prices.
+* Tweak - WooCommerce 9.7 Compatibility.
+* Fix   - First class and Second class domestic rate is missing tube rate.
+
+2025-01-27 - version 3.4.3
+* Update - Update Parcelforce international pricing.
+* Tweak  - PHP 8.4 Compatibility.
+
+2024-10-28 - version 3.4.2
+* Tweak - WordPress 6.7 compatibility.
+
+2024-10-07 - version 3.4.1
+* Update - Update pricing based on October 2024 rates.
+
+2024-09-09 - version 3.4.0
+* Add - Debug logging to legacy and blocks cart/checkout.
+
+2024-07-22 - version 3.3.3
+* Tweak - Add online price guide link in the description.
+
+2024-07-16 - version 3.3.2
+* Tweak - Refactor duplicate hardcoded strings to utilize enums.
+
+2024-07-08 - version 3.3.1
+* Fix - New product editor compatibility.
+
+2024-06-26 - version 3.3.0
+* Add    - "Available on" display to indicate the rates availability.
+* Update - Update online rate pricing based on July 2024 rates.
+* Tweak  - WordPress 6.6 Compatibility.
+
+2024-06-12 - version 3.2.5
+* Fix - "Debug Mode" is enabled on the first install.
+
+2024-05-06 - version 3.2.4
+* Fix - Non-tube item is being packed as a tube.
+
+2024-04-09 - version 3.2.3
+* Update - Update pricing based on April 2024 rates.
+
+2024-03-25 - version 3.2.2
+* Tweak - WordPress 6.5 Compatibility.
+
+2024-03-19 - version 3.2.1
+* Fix - WordPress Coding Standards.
+
+2024-01-30 - version 3.2.0
+* Update - Update pricing based on January 2024 rates.
+
+2024-01-08 - version 3.1.0
+* Add - Additional compensation option in the settings.
+
+2023-11-28 - version 3.0.2
+* Fix - International rates is not being displayed for printed papers.
+
+2023-10-10 - version 3.0.1
+* Update - Security update.
+
+2023-10-03 - version 3.0.0
+* Add - Online rate option in the settings.
+* Add - Ignore maximum total cover option in shipping settings.
+
+2023-09-05 - version 2.9.1
+* Tweak - Return boolean in debug function.
+* Add   - Add QIT workflow for developers.
+
+2023-07-17 - version 2.9.0
+* Add - Parcelforce Express 48 Large rates.
+
+2023-05-31 - version 2.8.1
+* Update - Security update.
+
+2023-04-03 - version 2.8.0
+* Fix - Update pricing based on April 2023 retail rates.
+
+2023-02-27 - version 2.7.2
+* Fix - Tube package is not included in UK Tracked 24 and 48.
+
+2023-01-16 - version 2.7.1
+* Fix - Use more unique string for packing and service options element in HTML.
+
+2022-10-25 - version 2.7.0
+* Add - Declared HPOS compatibility.
+* Fix - `Uncaught TypeError` when adding a product that does not have dimensions.
+
+2022-09-07 - version 2.6.0
+* Fix   - Exclude unnecessary files from plugin zip file.
+* Tweak - WC 6.6 and WP 6.0 compatibility.
+
+2022-05-03 - version 2.5.43
+* Fix   - International standard has incorrect rates.
+
+2022-03-28 - version 2.5.42
+* Fix   - Update Royalmail pricing based on April 2022 rates.
+* Tweak - Update WC 6.3 compatibility.
+
+2022-02-03 - version 2.5.41
+* Fix   - Rolled back Royalmail pricing to be based on April 2021 "over the counter" rates instead of online price.
+
+2022-01-25 - version 2.5.40
+* Fix   - Update Royalmail pricing based on January 2022 rates.
+
+2022-01-05 - version 2.5.39
+* Fix   - Missing Languages folder and .pot file in release-ready zip file.
+
+2021-10-06 - version 2.5.38
+* Add - Printed Papers service.
+
+2021-09-21 - version 2.5.37
+* Fix   - Update Parcelforce pricing based on July 2021 rates.
+* Tweak - Update WP & WC compatibility.
+
+2021-07-27 - version 2.5.36
+* Fix - Updated Composer packages to be compatible with Composer 2.
+
+2021-06-28 - version 2.5.35
+* Fix   - International rates missing when letters are too heavy.
+* Fix 	- Ensure the following services are charged VAT; "Special Delivery Guaranteed by 1pm", "Royal Mail Tracked 24 & 48".
+
+2021-04-20 - version 2.5.34
+* Tweak - Update pricing links to reflect latest April 2021 changes.
+
+2021-01-06 - version 2.5.33
+* Tweak - Adds pricing rates effective 1st January 2021.
+
+2020-11-24 - version 2.5.32
+* Add   - Add Tracked 24 and Tracked 48 services.
+
+2020-09-07 - version 2.5.31
+* Tweak - Adds pricing rates effective 1st September 2020.
+
+2020-08-14 - version 2.5.30
+* Fix   - Replace deprecated jQuery methods.
+* Tweak - WordPress 5.5 compatibility.
+
+2020-06-23 - version 2.5.29
+* Update - Adds pricing rates effective 1st July 2020.
+
+2020-06-07 - version 2.5.28
+* Add - Setting to control tax status.
+* Tweak - WC 4.2 compatibility.
+
+2020-04-30 - version 2.5.27
+* Tweak - WC 4.1 compatibility.
+
+2020-04-21 - version 2.5.26
+* Fix - Update description links to point to 2020 rates.
+
+2020-04-08 - version 2.5.25
+* Fix - ParcelForce rates break down when shipping more than 30kg.
+* Fix - Update International Economy maximum box weight to 2kg.
+
+2020-03-19 - version 2.5.24
+* Tweak - Remove legacy code.
+* Update - Adds pricing rates effective 23rd March 2020.
+* Tweak - Adjust tests for Jersey destination.
+
+2020-03-04 - version 2.5.23
+* Fix - Prevent international signed from returning a rate if one of the packages exceeds a limitation.
+* Fix - Shipping to the Channel Islands and the Isle of Man is detected as international shipping.
+* Tweak - WC 4.0 compatibility.
+
+2020-02-12 - version 2.5.22
+* Tweak - Update Parcelforce rates to the latest.
+
+2020-02-05 - version 2.5.21
+* Fix - Use proper escape for attributes.
+
+2020-01-14 - version 2.5.20
+* Tweak - WC tested up to 3.9.
+
+2019-11-04 - version 2.5.19
+* Tweak - WC tested up to 3.8.
+
+2019-10-23 - version 2.5.18
+* Fixed debug log to display for First and Second Class rates
+
+2019-08-08 - version 2.5.17
+* Tweak - WC tested up to 3.7.
+
+2019-04-23 - version 2.5.16
+* Fix - First class signed for and Second class sign for rates being returned when product value is above 20 and 50 for compensation.
+* Fix - Change WooThemes.com links to WooCommerce.com links.
+* Update - Link to 2019 pricing list PDF and remove 2018 PDF link.
+
+2019-04-16 - version 2.5.15
+* Tweak - WC tested up to 3.6.
+
+2019-03-19 - version 2.5.14
+* Update - Adds pricing rates effective March 25, 2019.
+* Update - Adds date check to switch to 2019 rates on March 25, 2019.
+
+2019-03-04 - version 2.5.13
+* Update - Signed domestic rate.
+
+2019-02-25 - version 2.5.12
+* Fix    - Makes Royal Mail shipping costs tax exempt, but keeps calculating taxes for ParcelForce shipping costs
+
+2018-10-16 - version 2.5.11
+* Update - WC tested up to 3.5.
+
+2018-05-22 - version 2.5.10
+* Update - WC tested up to version.
+* Update - Privacy policy notification.
+
+2018-05-04 - version 2.5.9
+* Fix    - Use method description with correct link to price updates.
+* Update - WC tested up to version.
+
+2018-03-27 - version 2.5.8
+* Update - Pricing rates effective March 2018.
+
+2018-03-14 - version 2.5.7
+* Add - Option to set if compensation is optional to allow all rates to return.
+
+2017-12-12 - version 2.5.6
+* Update - WC tested up to version.
+
+2017-09-06 - version 2.5.5
+* Fix - Fatal error that might be thrown in cart page when calculating international shipping using box packing.
+
+2017-08-01 - version 2.5.4
+* Fix - Issue where maximum parcel dimension rule for international rates is not checked.
+* Fix - Added more checks for RoyalMail international rates. Changes include: add tracked-signed as its own rate class, each international rate class should check supported countries, and each international rate class should check max. compensation.
+* Fix - Missing link (to general settings page) in notices when currency is not set to Pounds and/or country/region is not set to UK.
+
+2017-07-25 - version 2.5.3
+* Fix - Deprecated `$GLOBALS['woocommerce']` being used in the codebase.
+* Enhancement - Add support for international Parcelforce rates (globaleconomy, globalvalue, globalpriority, globalexpress, irelandexpress).
+
+2017-05-05 - version 2.5.2
+* Update - Rate pricing changes.
+* Fix - WC30 notices.
+
+2016-10-07 - version 2.5.1
+* Tweak - Ensure the shipping zone upgrade notice is shown when the user updates this plugin.
+
+2016-09-07 - version 2.5.0
+* Add - Support for WooCommerce 2.6+ shipping zones.
+* Fix - International Tracked and Signed amounts wrong.
+
+2016-04-04 - version 2.4.1
+* Update method calculate_shipping to reflect parent class argument defaults for WooCommerce 2.6
+* Update box packer class to reflect new changes in main box packer extension.
+
+2016-04-04 - version 2.4.0
+* Updated rates to 2016 http://www.royalmail.com/sites/default/files/RoyalMail_2016_Prices.pdf
+
+2016-01-12 - version 2.3.1
+* Fix several PHP warnings (undefined variables and mismatched data types).
+* Improve wording for settings fields.
+* Provide link to general settings when country and currency are not correctly set.
+
+2015-05-28 - version 2.3.0
+* Add Parcelforce Worldwide rates.
+* Fix rates link in admin.
+* Fix SD 9am coverage.
+* Added filters around bands and box sizes.
+* Treat box sizes < package dimensions as letters.
+
+2015-04-21 - version 2.2.1
+* Remove Large Letter from EU exclusion
+
+2015-03-03 - version 2.2.0
+* Updated rates to 2015 http://www.royalmail.com/sites/default/files/Royal-Mail-UK-and-international-parcel-and-letter-prices-30-March-2015.pdf
+
+2014-10-13 - version 2.1.3
+* Update box packer
+
+2014-10-08 - version 2.1.2
+* Updated box packer.
+* Added small parcel size http://www.royalmail.com/new-parcel-size?elq_mid=1184&elq_cid=1690402
+
+2014-04-02 - version 2.1.1
+* Fix calculation in special delivery methods
+
+2014-03-27 - version 2.1.0
+* March 31st 2014 Rate update
+* New international services; you will need to reconfigure your Royal Mail rates after updating!
+* Updated textdomains
+* Code standards update
+
+2014-01-22 - version 2.0.6
+* Fix international rates when using custom box sizes
+
+2013-11-28 - version 2.0.5
+* 2.1 compatibility
+
+2013-11-28 - version 2.0.4
+* Ensure rate class is only loaded once
+
+2013-02-01 - version 2.0.3
+* Small parcel wide/deep
+
+2013-02-01 - version 2.0.2
+* Typos in rate names
+* Fixed notices on save
+
+2013-02-01 - version 2.0.1
+* Incorrect price band for SD 9am
+* Incorrect max price band for SD Next day
+* Corrected text to state 2013 price guide instead of 2012.
+
+2013-02-01 - version 2.0.0
+* First Release

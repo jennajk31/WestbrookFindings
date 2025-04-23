@@ -1,0 +1,320 @@
+*** Australia Post ***
+
+2025-04-07 - version 2.7.1
+* Tweak - WooCommerce 9.8 compatibility.
+
+2025-03-17 - version 2.7.0
+* Add   - New box packer with setting option for box packer library selection.
+
+2025-03-04 - version 2.6.6
+* Tweak - WooCommerce 9.7 compatibility.
+
+2025-01-27 - version 2.6.5
+* Tweak - PHP 8.4 compatibility.
+
+2024-10-22 - version 2.6.4
+* Tweak - WordPress 6.7 compatibility.
+
+2024-09-18 - version 2.6.3
+* Fix   - Fatal error: "Uncaught TypeError: sizeof()" thrown on PHP 8.
+
+2024-07-02 - version 2.6.2
+* Tweak - WordPress 6.6 & WooCommerce 9.0 Compatibility.
+
+2024-06-04 - version 2.6.1
+* Fix - Registration link does not show properly inside the error message in settings page.
+
+2024-05-20 - version 2.6.0
+* Add - Log feature.
+
+2024-03-25 - version 2.5.8
+* Tweak - WordPress 6.5 Compatibility.
+
+2023-10-03 - version 2.5.7
+* Fix - WordPress Coding Standards.
+
+2023-09-11 - version 2.5.6
+* Update - Security updates.
+
+2023-09-05 - version 2.5.5
+* Add - Developer QIT workflow.
+
+2023-08-08 - version 2.5.4
+* Fix - Security updates.
+
+2023-07-17 - version 2.5.3
+* Fix - Deprecated error on PHP 8.2.
+* Fix - Missing packed satchel dimensions in order meta.
+
+2023-07-03 - version 2.5.2
+* Fix - Warning error when calculating shipping.
+* Fix - Update medium satchel sizes.
+* Fix - Update international signature on delivery cost.
+
+2023-03-29 - version 2.5.1
+* Fix - Update satchel sizes and API request to get accurate rates.
+
+2022-10-25 - version 2.5.0
+* Add - Declared HPOS compatibility.
+
+2022-09-06 - version 2.4.33
+* Fix   - Exclude unnecessary files from plugin zip file.
+* Tweak - WC 6.6 and WP 6.0 compatibility.
+
+2022-01-31 - version 2.4.32
+* Fix - Change deprecated readonly() to wp_readonly() for WP 5.9 compatibility.
+* Tweak - WC 6.1 compatibility.
+* Tweak - WP 5.9 compatibility.
+
+2022-01-05 - version 2.4.31
+* Fix - Missing Languages folder and .pot file in release-ready zip file.
+
+2021-12-13 - version 2.4.30
+* Add - Box Packer details to the order item meta.
+* Fix - Check letter dimensions separately for international letter rates.
+* Tweak - WC 5.9 compatibility.
+
+2021-08-19 - version 2.4.29
+* Tweak - WC 5.5 compatibility.
+* Tweak - WordPress 5.8 compatibility.
+
+2020-11-24 - version 2.4.28
+* Fix - PHP 8 compatibility.
+
+2020-09-23 - version 2.4.27
+* Fix - Update URL for AusPost package dimensions.
+* Fix - International does not require destination postcode to get rates.
+* Fix - Add missing International Economy Air service.
+
+2020-08-17 - version 2.4.26
+* Fix   - Replace deprecated jQuery methods.
+* Tweak - WordPress 5.5 compatibility.
+
+2020-06-16 - version 2.4.25
+* Fix - Single rates returned from API not shown as available methods.
+
+2020-06-10 - version 2.4.24
+* Tweak - WC 4.2 compatibility.
+
+2020-04-28 - version 2.4.23
+* Fix    - Sending wrong product dimensions to the API.
+
+2020-04-01 - version 2.4.22
+* Update - New box dimensions and weight.
+* Tweak  - Added filter for multi-currency use.
+* Fix    - Keep consistent dimension units for boxes/envelopes.
+
+2020-03-05 - version 2.4.21
+* Tweak - WC tested up to 4.0
+
+2020-02-18 - version 2.4.20
+* Tweak - Remove legacy code.
+
+2020-02-04 - version 2.4.19
+* Fix - Update outdated API link in settings
+* Fix - Use proper escape for attributes.
+
+2020-01-13 - version 2.4.18
+* Fix - Extra cover should only be included if item is over $100.
+* Tweak - WC tested up to 3.9
+
+2019-11-18 - version 2.4.17
+* Fix - Impossible to get rates for addresses out of Australia territories.
+
+2019-11-04 - version 2.4.16
+* Tweak - WC tested up to 3.8
+
+2019-10-30 - version 2.4.15
+* Fix - Do not send API request if to/from postcode is missing.
+* Fix - Use individual transient name for each response cache instead of just one.
+
+2019-10-23 - version 2.4.14
+* Update - New PAC API Service codes for Parcel Express Satchels
+
+2019-10-03 - version 2.4.13
+* Update - Extra cover charges.
+
+2019-08-06 - version 2.4.12
+* Tweak - WC tested up to 3.7.
+
+2019-05-08 - version 2.4.11
+* Fix - Update conversions for letter dimensions.
+* Fix - Update 1kg satchel configs.
+
+2019-04-16 - version 2.4.10
+* Tweak - WC tested up to 3.6
+
+2019-04-03 - version 2.4.9
+* Update - Add 1kg small-medium satchel.
+
+2019-01-07 - version 2.4.8
+* Update - Add satchels as default boxes for box packing.
+* Update - Add support for packets and tubes for custom packages.
+* Fix    - External Territories not recognized for Shipping Zones.
+* Fix    - Extension show rates for products which exceed Maximum parcel size if Parcel Packing Method is set to Weight of all items.
+
+2018-09-27 - version 2.4.7
+* Update - WC tested up to 3.5
+
+2018-05-23 - version 2.4.6
+* Update - WC tested up to 3.4
+* Add - GDPR privacy
+
+2017-12-14 - version 2.4.5
+* Fix - Make sure extra cover is enabled before charging SOD on over $300.
+* Fix - Multiple items when letter package is set causes shipping cost to be lower than what it should be.
+* Update - International SOD cost from 4.99 to 5.49.
+* Update - WC tested up to version.
+
+2017-08-07 - version 2.4.4
+* Fix - Handle the remote request error from Australia Post.
+* Fix - PHP notice: id was called incorrectly. Product properties should not be accessed directly.
+
+2017-05-18 - version 2.4.3
+* Fix - Deprecated notice of accessing property directly (from WC 3.0).
+* Fix - Issue where valued item above $300 doesn't add SOD.
+* Fix - Malformed settings link on plugin row on plugins page.
+
+2017-04-03 - version 2.4.2
+* Fix - Make sure debug message show correct product id.
+* Fix - Use proper rate comparison in case where users had extra cover and/or SOD.
+* Fix - Update for WooCommerce 3.0 compatibility.
+
+2016-10-13 - version 2.4.1
+* Fix - Can't use method in return context error.
+* Add - Supported currency check.
+
+2016-10-07 - version 2.4.0
+* Add - Support for WooCommerce 2.6+ shipping zones.
+* Update - Change plugin main file name to woocommerce-shipping-australia-post.
+* Update - Text domain name to woocommerce-shipping-australia-post.
+
+2016-08-19 - version 2.3.15
+* Fix - Rates still requested when extension active but not enabled.
+
+2016-08-14 - version 2.3.14
+* Fix - Make sure weight is sent to AuPost API with dot decimal separator.
+
+2016-06-08 - version 2.3.13
+* Tweak - Add link to general settings in a notice when base country/region is not set to Australia.
+* Fix - Add front-end conversion on letter check and moved backend conversion on saving metrics.
+* Fix - Pass letter box type values to API as grams
+* Fix - Convert box type values back to user input metrics for better letter type after the boxes have been packed.
+
+2016-04-28 - version 2.3.12
+* Fix - Strict notice caused by new method signature in WooCommerce 2.6
+* Fix - Issue where no rates returned for Express and Registered Post International
+* Fix - Issue where Air Mail is not returned unless Extra Cover or Signature Required is selected
+* Fix - Issue where Extra Cover options did not match what is currently offered
+* Fix - Updated box packer with upstream box packer
+* Fix - Updated rates per new rates services on 18th April 2016. See http://auspost.com.au/pdfs/pac-api-update-2016.pdf
+
+2016-02-29 - version 2.3.11
+* Fix - Correctly pass weight based on store weight setting.
+
+2016-02-10 - version 2.3.10
+* Fix - When letter package is used, height measurement needs to be in mm
+* Fix - Box packer validation is not saving values accurately
+
+2016-01-12 - version 2.3.9
+* Fix - Ship by weight only: Split into parcels according to individual item weight.
+* Fix - Add missing domestic letter service codes
+* Fix - Box packer volume comparison
+
+2015-10-27 - version 2.3.8
+* Fix - Do not remove GST from international rates.
+
+2015-10-23 - version 2.3.7
+* Fix - Exclude tax calculation.
+* Fix - Avoid adding SOD twice.
+
+2015-07-31 - version 2.3.6
+* Added an option to allow "Satchel Rates" to be turned off
+
+2015-07-30 - version 2.3.5
+* Added "calculate rates excluding tax" option
+* Added a check when saving the API key field to make sure that the key is valid
+* Fix - Remove use of sslverify=false in remote requests
+
+2015-01-22 - version 2.3.4
+* Added missing medium letter rates.
+
+2014-10-13 - version 2.3.3
+* Update box packer
+
+2014-10-08 - version 2.3.2
+* Updated box packer.
+
+2014-06-03 - version 2.3.1
+* Prevent autoloading of transients by setting expirey.
+
+2013-12-24 - version 2.3.0
+* Option to give priority to satchels
+
+2013-12-24 - version 2.2.1
+* Tweaked max weight to 22
+* 2.1 compatibility
+
+2013-12-24 - version 2.2.0
+* Tweaked domestic requests and improved query speed. Included SOD cost in plugin, rather than with a request.
+
+2013-12-06 - version 2.1.14
+* Express 3 and 5kg
+
+2013-12-06 - version 2.1.13
+* Fixed notice
+
+2013-08-27 - version 2.1.12
+* Removed obsolete checks for maximum girth size
+
+2013-08-05 - version 2.1.11
+* Allowed for non-registered letters
+
+2013-07-14 - version 2.1.10
+* Set debug default to no
+
+2013-06-25 - version 2.1.9
+* Added Express Courier International
+
+2013-05-28 - version 2.1.8
+* New services http://auspost.com.au/parcels-mail/changes-to-parcel-service.html
+
+2013-05-28 - version 2.1.7
+* Improved girth logic
+
+2013-05-07 - version 2.1.6
+* Added girth check for satchels.
+
+2013-04-04 - version 2.1.5
+* Fix virtual check when box packing
+
+2013-03-22 - version 2.1.4
+* Check satchel dimensions manually.
+
+2013-02-26 - version 2.1.3
+* Fix box saving
+
+2013-02-26 - version 2.1.2
+* Don't add alternate services to cost - use them.
+
+2013-02-01 - version 2.1.1
+* Cover for RPI
+
+2013-01-28 - version 2.1.0
+* Fix air mail rates for letters
+* Merge similar rates to deal with mixes of boxes and letters
+
+2013-01-25 - version 2.0.3
+* Fix regular parcel rates
+
+2013-01-23 - version 2.0.2
+* Fix satchel rates for 3 and 5kg
+* Don't show unknown rates
+* Fix outer dimensions in box packer
+* Ensure rates are available for all packages
+
+2012-12-04 - version 2.0.1
+* Fix registered post name
+
+2012-12-04 - version 2.0.0
+* Complete rewrite using Australia Posts latest APIs.

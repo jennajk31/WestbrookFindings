@@ -1,0 +1,1119 @@
+# Copyright (C) 2025 Avalara
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Avalara AvaTax 3.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://woocommerce.com/my-account/marketplace-ticket-form/\n"
+"POT-Creation-Date: 2025-03-24 09:44:33+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: class-wc-avatax.php:468
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag, %3$s -
+#. <a> tag, %4$s - </a> tag
+msgid ""
+"%1$sWooCommerce AvaTax is almost ready!%2$s To get started, please "
+"​%3$sconnect to AvaTax%4$s."
+msgstr ""
+
+#: class-wc-avatax.php:481
+msgid ""
+"Either your Account ID or License key is incorrect. Incase you have just "
+"generated a new license key, try again after few minutes."
+msgstr ""
+
+#: class-wc-avatax.php:490
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag, %3$s -
+#. <a> tag, %4$s - </a> tag
+msgid ""
+"%1$sThanks for installing WooCommerce AvaTax!%2$s Need help? %3$sRead the "
+"documentation%4$s."
+msgstr ""
+
+#: class-wc-avatax.php:506
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag, , %3$s
+#. - <a> tag, %4$s - </a> tag
+msgid ""
+"%1$sWooCommerce taxes are disabled.%2$s To see tax rates from AvaTax at "
+"checkout, please %3$senable taxes%4$s for your store."
+msgstr ""
+
+#: class-wc-avatax.php:528
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
+msgid ""
+"%1$sWooCommerce AvaTax%2$s calculation is disabled. Please configure your "
+"full Origin Address."
+msgstr ""
+
+#: class-wc-avatax.php:567
+msgid "The legacy version of the WooCommerce AvaTax exension was deactivated."
+msgstr ""
+
+#: class-wc-avatax.php:597
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag, %3$s -
+#. <a> tag, %4$s - </a> tag, %5$s - <a> tag, %6$s - </a> tag
+msgid ""
+"<p>%1$sHeads up!%2$s Cross-border product sync encountered an error while "
+"syncing your products to AvaTax. Please try again or contact support if "
+"you're continuing to encounter this message.</p>%3$sResync products%4$s "
+"%5$sContact support%6$s"
+msgstr ""
+
+#: class-wc-avatax.php:624
+#. translators: Placeholders: %1$s - <a> tag, %2$s - </a> tag
+msgid ""
+"For best results in calculating cross-border duties, ensure weight is "
+"entered for your products in Product data > Shipping. %1$sLearn more%2$s."
+msgstr ""
+
+#: class-wc-avatax.php:706
+msgid "WooCommerce AvaTax"
+msgstr ""
+
+#: class-wc-avatax.php:1896
+msgid "Every 15 Minutes"
+msgstr ""
+
+#: src/Landed_Cost_Sync_Handler.php:719
+msgid ""
+"Cross-border product sync stopped. Please ensure you have valid credentials "
+"and an active subscription for cross-border item classification."
+msgstr ""
+
+#: src/Landed_Cost_Sync_Handler.php:824
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
+msgid ""
+"%1$sYour catalog is synced to AvaTax!%2$s Cross-border tax calculations can "
+"now take place at checkout. Catalog updates will be synced to AvaTax as you "
+"add, update, or delete products in WooCommerce."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:169
+#: src/frontend/class-wc-avatax-frontend.php:152
+msgid "Please select exposure zone."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:170
+#: src/frontend/class-wc-avatax-frontend.php:153
+msgid "Please enter billing email address and save the details."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:171
+msgid ""
+"Entered billing email address is different from the billing email currently "
+"saved in DB. Press OK to proceed or Cancel to change the billing email "
+"address."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:172
+#: src/frontend/class-wc-avatax-frontend.php:154
+msgid ""
+"The page you're looking for couldn't be found. Please contact Avalara "
+"Support."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:173
+msgid ""
+"Please enter billing address details and save. There might be possibility "
+"that you have entered the details but not it is not saved."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:174
+#: src/frontend/class-wc-avatax-frontend.php:155
+msgid "Are you sure you’d like to invalidate this certificate?"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:186
+msgid ""
+"Heads up! AvaTax does not support tax-rate-based refunds. If taxes are "
+"refunded partially, the amount will be distributed across all tax rates."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:188
+msgid "Are you sure?"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:189
+msgid ""
+"Disconnecting now will immediately end the product sync between your store "
+"and Avalara. Any new or updated products will not be synced with Avalara, "
+"which may impact your cross-border tax calculations. Do you still want to "
+"disconnect?"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:190
+#: src/e-invoicing/views/html-elr-field-mapper.php:109
+msgid "Yes"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:191
+#: src/e-invoicing/views/html-elr-field-mapper.php:110
+msgid "No"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:192
+msgid "Syncing..."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:193
+msgid "Sync is in process, but you can safely leave this screen."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:197
+msgid "Please stop the current sync to disable cross-border classification."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:400
+#: src/admin/views/html-field-product-tax-code-bulk-edit.php:33
+#: src/admin/views/html-field-product-tax-code-bulk-edit.php:42
+#: src/admin/views/html-field-product-tax-code-quick-edit.php:33
+#: src/admin/views/html-field-product-variation-tax-code.php:36
+msgid "Tax Code"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:441
+#: src/frontend/class-wc-avatax-frontend.php:362
+msgid "VAT ID"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:460
+msgid "VAT message"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:538
+msgid "Send to Avalara"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:562
+msgid "Federal government"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:563
+msgid "State government"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:564
+msgid "Tribe / Status Indian / Indian Band"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:565
+msgid "Foreign diplomat"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:566
+msgid "Charitable or benevolent organization"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:567
+msgid "Religious organization"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:568
+msgid "Resale"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:569
+msgid "Commercial agricultural production"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:570
+msgid "Industrial production / manufacturer"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:571
+msgid "Direct pay permit"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:572
+msgid "Direct mail"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:573
+msgid "Other"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:574
+msgid "Educational organization"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:575
+msgid "Local government"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:576
+msgid "Commercial aquaculture"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:577
+msgid "Commercial Fishery"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:578
+msgid "Non-resident"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:579
+msgid "US MDET with exempt sales tax"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:580
+msgid "US MDET with taxable sales tax"
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:701
+msgid "Sorry, you are not allowed to give users that role."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:717
+msgid "<strong>Error:</strong> Please enter a username."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:722
+msgid "<strong>Error:</strong> Please enter a nickname."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:727
+msgid "<strong>Error:</strong> Please enter a password."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:732
+msgid "<strong>Error:</strong> Passwords may not contain the character \"\\\"."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:737
+msgid ""
+"<strong>Error:</strong> Passwords do not match. Please enter the same "
+"password in both password fields."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:745
+msgid ""
+"<strong>Error:</strong> This username is invalid because it uses illegal "
+"characters. Please enter a valid username."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:749
+msgid ""
+"<strong>Error:</strong> This username is already registered. Please choose "
+"another one."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:756
+msgid "<strong>Error:</strong> Sorry, that username is not allowed."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:761
+msgid "<strong>Error:</strong> Please enter an email address."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:763
+msgid "<strong>Error:</strong> The email address is not correct."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:767
+msgid ""
+"<strong>Error:</strong> This email is already registered. Please choose "
+"another one."
+msgstr ""
+
+#: src/admin/class-wc-avatax-admin.php:836
+msgid "Error while updating data in avatax."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:92
+msgid "AvaTax"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:110
+msgid "Connect to Avalara"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:115
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:148
+msgid "Choose your account type"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:117
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:150
+msgid "Production"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:118
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:151
+msgid "Development"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:127
+msgid "Account ID"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:138
+msgid "License Key/Password"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:306
+msgid "Enter Account ID and License key."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:383
+msgid "Transactions outside the US (HS code classification)"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:387
+msgid "Enable sync"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:388
+msgid ""
+"Calculate customs duties for orders outside the U.S. In Avalara, line items "
+"must have a fully qualified tariff code to calculate customs duties for the "
+"destination country."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:395
+msgid "Avalara username"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:398
+msgid "The username used for your Avalara login."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:402
+msgid "Avalara password"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:405
+msgid "The password used for your Avalara login."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:409
+msgid "Select countries to assign HS codes"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:414
+msgid ""
+"Select countries outside U.S. to calculate customs duties. Avalara "
+"automatically assigns HS codes for the countries you select."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:418
+msgid "Sync products with Avalara"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:449
+msgid ""
+"If you are new to Avalara, %1$ssign up%2$s to generate your account "
+"information."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:569
+msgid "Please fill in your Avalara username and password"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:573
+msgid "Please select at least one supported country."
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:578
+#. translators: Placeholders: %1$s - opening <strong> HTML tag, %2$s - closing
+#. </strong> HTML tag, %3$s - unordered HTML list of sync errors
+msgid "%1$sUnable to sync. Please correct the following errors:%2$s %3$s"
+msgstr ""
+
+#: src/admin/class-wc-avatax-settings.php:779
+msgid "Unable to connect to Avalara API service, please try again after some time."
+msgstr ""
+
+#: src/admin/class-wc-avatax-shipping-transport.php:103
+msgid "Avalara Transport"
+msgstr ""
+
+#: src/admin/class-wc-avatax-shipping-transport.php:104
+msgid ""
+"Specify who is responsible for handling the transportation of goods in a "
+"VAT transaction. If you don't specify a value, Seller is used by default."
+msgstr ""
+
+#: src/admin/views/Exemption/html-account-add-exemption.php:37
+#: src/admin/views/html-sync-modal.php:23
+msgid "Close"
+msgstr ""
+
+#: src/admin/views/html-certificate-details.php:195
+msgid "Tax Certificates"
+msgstr ""
+
+#: src/admin/views/html-edit-user-ior-fields.php:33
+#: src/admin/views/html-edit-user-ior-fields.php:37
+msgid "Seller importer of record"
+msgstr ""
+
+#: src/admin/views/html-edit-user-ior-fields.php:40
+msgid "Avatax Default"
+msgstr ""
+
+#: src/admin/views/html-edit-user-tax-fields.php:34
+msgid "Customer Tax Settings"
+msgstr ""
+
+#: src/admin/views/html-edit-user-tax-fields.php:38
+msgid "Tax Exemption"
+msgstr ""
+
+#: src/admin/views/html-edit-user-tax-fields.php:41
+msgid "No exemption"
+msgstr ""
+
+#: src/admin/views/html-field-add-category-tax-code.php:32
+#: src/admin/views/html-field-edit-category-tax-code.php:34
+msgid "Tax code"
+msgstr ""
+
+#: src/admin/views/html-field-product-tax-code-bulk-edit.php:36
+msgid "— No Change —"
+msgstr ""
+
+#: src/admin/views/html-field-product-tax-code-bulk-edit.php:37
+msgid "Change to:"
+msgstr ""
+
+#: src/admin/views/html-sync-modal.php:9
+msgid "Close modal panel"
+msgstr ""
+
+#: src/admin/views/product-sync.php:38 src/admin/views/product-sync.php:42
+msgid "Stop Sync"
+msgstr ""
+
+#: src/admin/views/product-sync.php:39 src/admin/views/product-sync.php:41
+msgid "Sync"
+msgstr ""
+
+#: src/admin/views/product-sync.php:56
+msgid ""
+"Check your credentials and ensure you have the subscription to continue. "
+"You can also check your subscription details with your customer account "
+"manager."
+msgstr ""
+
+#: src/admin/views/product-sync.php:59
+msgid "Your catalog is syncing to Avalara."
+msgstr ""
+
+#: src/admin/views/setting-address.php:47
+msgid "Street Address"
+msgstr ""
+
+#: src/admin/views/setting-address.php:52
+msgid "City/Town"
+msgstr ""
+
+#: src/admin/views/setting-address.php:57
+msgid "State/Region"
+msgstr ""
+
+#: src/admin/views/setting-address.php:62
+msgid "Zip/Postcode"
+msgstr ""
+
+#: src/admin/views/setting-address.php:67
+msgid "Country"
+msgstr ""
+
+#: src/admin/views/setting-address.php:76
+#: src/frontend/class-wc-avatax-frontend.php:228
+msgid "Validate Address"
+msgstr ""
+
+#: src/api/Models/HS_Item_Model.php:379
+msgid "Uncategorized"
+msgstr ""
+
+#: src/api/class-wc-avatax-api-tax-rate.php:125
+msgid "Duty"
+msgstr ""
+
+#: src/api/class-wc-avatax-api-tax-rate.php:132
+#. translators: Placeholder: %s - tax name
+msgid "Tax - %s"
+msgstr ""
+
+#: src/api/class-wc-avatax-api-tax-rate.php:149
+#. translators: Placeholders: %1$s - tax name, %2$s - tax type (VAT or Tax)
+msgid "%1$s %2$s"
+msgstr ""
+
+#: src/api/requests/class-wc-avatax-api-tax-request.php:1464
+#: src/e-invoicing/views/html-elr-field-mapper.php:46
+#: src/e-invoicing/views/html-elr-preview-data.php:35
+msgid "Refund"
+msgstr ""
+
+#: src/api/requests/class-wc-avatax-api-void-request.php:50
+#: src/api/requests/class-wc-avatax-api-void-request.php:71
+msgid "Invalid order key."
+msgstr ""
+
+#: src/api/responses/class-wc-avatax-api-response.php:89
+msgid "Error"
+msgstr ""
+
+#: src/class-wc-avatax-checkout-handler.php:199
+msgid "Checkout Error: %s"
+msgstr ""
+
+#: src/class-wc-avatax-checkout-handler.php:361
+#: src/class-wc-avatax-order-handler.php:1757
+msgid "Retail Delivery Fee"
+msgstr ""
+
+#: src/class-wc-avatax-checkout-handler.php:770
+msgid "Please validate your address to continue"
+msgstr ""
+
+#: src/class-wc-avatax-landed-cost-handler.php:408
+msgid ""
+"Import duties could not be calculated for the following items (missing "
+"cross-border classification for the destination country):"
+msgstr ""
+
+#: src/class-wc-avatax-landed-cost-handler.php:447
+msgid "Import Fees"
+msgstr ""
+
+#: src/class-wc-avatax-legacy-handler.php:102
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
+msgid ""
+"%1$sWooCommerce AvaTax%2$s is inactive. Please deactivate %1$sAvaTax "
+"Integration for WooCommerce%2$s to continue."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:55
+msgid "AvaTax Error"
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:436
+msgid "Order not sent to Avalara."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:437
+msgid "AvaTax is configured to not record permanent calculations."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:437
+msgid "Permanent calculations were disabled for this order."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:438
+msgid "Please add the order manually from your Avalara Control Panel."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:487
+#. translators: Placeholders: %1$s - error indicator, %2$s - error message
+msgid "%1$s Order could not be sent. %2$s"
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:510
+msgid "Order sent to Avalara."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1119
+msgid "Refund #%s sent to Avalara."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1144
+#. translators: Placeholders: %1$s - error indicator, %2$s -refund ID, %3$s -
+#. error message
+msgid ""
+"%1$s Refund #%2$s could not be sent. %3$s Please add the refund manually "
+"from your Avalara Control Panel."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1241
+msgid "Refund #%s voided in Avalara."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1271
+#. translators: Placeholders: %1$s - error indicator, %2$s - refund ID, %3$s -
+#. error message
+msgid ""
+"%1$s Refund #%2$s could not be voided. %3$s Please void manually from your "
+"Avalara Control Panel."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1328
+msgid "Order voided in Avalara."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1354
+#. translators: Placeholders: %1$s - error indicator, %2$s - error message
+msgid ""
+"%1$s Order could not be voided. %2$s Please void manually from your Avalara "
+"Control Panel."
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1695
+msgid "Retail Delivery Fees:"
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1696
+msgid "Retail Delivery Fee:"
+msgstr ""
+
+#: src/class-wc-avatax-order-handler.php:1735
+msgid "Retail Delivery Fees"
+msgstr ""
+
+#: src/e-invoicing/api/class-wc-avatax-elr-api.php:411
+msgid "Error:"
+msgstr ""
+
+#: src/e-invoicing/api/class-wc-avatax-elr-api.php:412
+msgid "Unable to retrieve company information. Please try again later."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:105
+msgid ""
+"%1$sAvalara E-Invoicing and Live Reporting (ELR) requires HPOS feature "
+"enabled!%2$s"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:126
+msgid "E-Invoicing and Live Reporting"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:144
+msgid "Avalara E-Invoicing and Live Reporting"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:159
+msgid "Client ID"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:169
+#: src/e-invoicing/views/html-field-client_secret.php:43
+msgid "Client secret"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:176
+msgid "Company"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:184
+msgid "Enable logging"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:185
+msgid ""
+"Creates a log of API requests, responses, and errors for transactions. The "
+"log is useful in troubleshooting issues with transactions and is saved in "
+"WooCommerce."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:317
+msgid "Enter client ID and client secret."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr-settings.php:320
+msgid "Either your client ID or client secret is incorrect."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:92
+msgid "ELR Order"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:126
+msgid "ELR Refund"
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:312
+msgid "Order #%s sent to Avalara E-invoicing and Live Reporting."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:364
+msgid "Refund #%s sent to Avalara E-invoicing and Live Reporting."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:378
+msgid "Invoice not sent to Avalara E-invoicing and Live Reporting."
+msgstr ""
+
+#: src/e-invoicing/class-wc-avatax-elr.php:544
+msgid "Send to Avalara E-invoicing and Live Reporting"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:33
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:98
+msgid "Conditional parameters"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:33
+msgid ""
+"The conditional fields selected here will be used to create the execution "
+"rule on the Avalara e-Invoicing portal. The same execution rules are used "
+"to select the mandates."
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:44
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:46
+msgid "Select source table"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:50
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:52
+msgid "Select data field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:60
+msgid ""
+"<strong>Note:</strong> The conditional fields selected here will be used to "
+"create the execution rule on Avalara E-Invoicing. The same execution rules "
+"are used to select the mandates."
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:67
+msgid "Set filter conditions in case of multiple records"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:68
+msgid ""
+"These fields are visible as you have selected the �Has multiple records� "
+"option under the Data selector tab."
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:70
+msgid "Filter by source table field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:72
+msgid "Select source table fields"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:78
+msgid "Enter filter value"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:91
+#: src/e-invoicing/views/html-elr-custom-fields.php:54
+#: src/e-invoicing/views/html-elr-field-mapper.php:121
+#: src/e-invoicing/views/html-field-elr_custom_tab.php:43
+msgid "Save"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:99
+#: src/e-invoicing/views/html-elr-field-mapper.php:67
+#: src/e-invoicing/views/html-elr-field-mapper.php:132
+msgid "Source table"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:100
+msgid "Source table field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:101
+msgid "Source filter field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:102
+msgid "Source filter value"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-conditional-field-mapper.php:103
+#: src/e-invoicing/views/html-elr-custom-fields.php:72
+#: src/e-invoicing/views/html-elr-field-mapper.php:139
+msgid "Action"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:32
+#: src/e-invoicing/views/html-elr-custom-fields.php:63
+msgid "Custom field type"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:33
+msgid ""
+"A customizable field added for ELR data collection. If you select "
+"‘Company-level’ option, the field you add will appear on the configuration "
+"page, and for the ‘Customer-level', it will be added to your <a "
+"href='/my-account/edit-account/' target='blank'>customer’s account details "
+"page</a>"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:36
+msgid "Company-level"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:37
+msgid "Customer-level"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:41
+#: src/e-invoicing/views/html-elr-custom-fields.php:66
+msgid "Custom field name"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:42
+msgid "Enter custom field name"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:45
+#: src/e-invoicing/views/html-elr-custom-fields.php:69
+msgid "Data type"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:47
+msgid "String"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:48
+msgid "Number"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:49
+msgid "Date"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-custom-fields.php:85
+#: src/e-invoicing/views/html-elr-custom-fields.php:93
+msgid "Delete"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:43
+msgid "Document type"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:45
+#: src/e-invoicing/views/html-elr-preview-data.php:34
+msgid "Order"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:54
+#: src/e-invoicing/views/html-elr-field-mapper.php:131
+msgid "Table format"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:56
+msgid "Flat"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:57
+msgid "EAV"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:58
+msgid "Vertical"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:60
+msgid "Learn more about these selections and how to configure them"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:68
+msgid ""
+"One of the tables with the relevant data related to the order. <a href='#'> "
+"Learn more about the source table </a>"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:74
+#: src/e-invoicing/views/html-elr-field-mapper.php:133
+msgid "Source table column"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:75
+#: src/e-invoicing/views/html-elr-field-mapper.php:76
+msgid "Select source table column"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:80
+#: src/e-invoicing/views/html-elr-field-mapper.php:82
+msgid "Select column data key"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:86
+#: src/e-invoicing/views/html-elr-field-mapper.php:88
+msgid "Select column data value"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:94
+#: src/e-invoicing/views/html-elr-field-mapper.php:134
+msgid "Reference table"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:95
+#: src/e-invoicing/views/html-elr-field-mapper.php:96
+msgid "Select reference table"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:101
+#: src/e-invoicing/views/html-elr-field-mapper.php:135
+msgid "Reference table field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:102
+#: src/e-invoicing/views/html-elr-field-mapper.php:103
+msgid "Select reference table field"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:108
+#: src/e-invoicing/views/html-elr-field-mapper.php:138
+msgid "Has multiple records?"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:136
+msgid "EAV key"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:137
+msgid "EAV value"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:148
+msgid "Select all"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:151
+msgid "Clear all"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-field-mapper.php:154
+msgid "Save and send to Avalara"
+msgstr ""
+
+#: src/e-invoicing/views/html-elr-preview-data.php:44
+msgid "Preview"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-api-environment.php:42
+#: src/e-invoicing/views/html-field-api-environment.php:48
+msgid "production"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-api-environment.php:43
+#: src/e-invoicing/views/html-field-api-environment.php:49
+msgid "development"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-client_secret.php:55
+msgid "Connect to Production"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-client_secret.php:56
+msgid "Connect to Sandbox"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-elr_company.php:57
+msgid "--Select a Company--"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-elr_custom_tab.php:50
+msgid "Custom fields"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-elr_custom_tab.php:51
+msgid "Data selector"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-elr_custom_tab.php:52
+msgid "Conditional fields"
+msgstr ""
+
+#: src/e-invoicing/views/html-field-elr_custom_tab.php:53
+msgid "Preview data"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:177
+#: src/frontend/class-wc-avatax-frontend.php:272
+msgid "Address validated."
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:293
+msgid "Taxes will be calculated after you validate your address"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:338
+msgid "Taxes will be calculated at checkout"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:488
+#: src/frontend/class-wc-avatax-frontend.php:496
+msgid "%1$sAdd Certificates%2$s"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:520
+msgid "%1$sManage existing certificates%2$s"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:610
+msgid "State"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:611
+msgid "SignedDate"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:612
+msgid "ExpirationDate"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:613
+#: src/utilities/class-wc-avatax-elr-utilities.php:1741
+#: src/utilities/class-wc-avatax-elr-utilities.php:1754
+#: src/utilities/class-wc-avatax-elr-utilities.php:1790
+#: src/utilities/class-wc-avatax-elr-utilities.php:1807
+msgid "Status"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:614
+msgid "View"
+msgstr ""
+
+#: src/frontend/class-wc-avatax-frontend.php:615
+msgid "Invalidate"
+msgstr ""
+
+#: src/frontend/templates/certificates.php:92
+msgid "No certificates found for this customer."
+msgstr ""
+
+#: src/utilities/class-wc-avatax-elr-utilities.php:1743
+#: src/utilities/class-wc-avatax-elr-utilities.php:1792
+msgid "Document Id"
+msgstr ""
+
+#: src/utilities/class-wc-avatax-elr-utilities.php:1745
+#: src/utilities/class-wc-avatax-elr-utilities.php:1794
+msgid "Message(s)"
+msgstr ""
+
+#: src/utilities/class-wc-avatax-utilities.php:616
+#. translators: Placeholders: %s - country name
+msgid ""
+"We cannot calculate import duties for %s for some of the products in your "
+"cart. By placing the order, you'll need to settle any applicable customs "
+"duties and fees with the shipment carrier. You can also contact us to "
+"complete your order."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Avalara AvaTax"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woocommerce.com/products/woocommerce-avatax/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Seamless integration with Avalara's tax calculation and management services."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Avalara"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://avlr.co/3I8hQgs"
+msgstr ""

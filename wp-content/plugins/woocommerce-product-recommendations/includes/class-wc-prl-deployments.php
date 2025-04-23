@@ -1,0 +1,439 @@
+<?php
+/**
+ * WC_PRL_Deployments class
+ *
+ * @package  WooCommerce Product Recommendations
+ * @since    1.0.0
+ */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Deployments Factory class.
+ *
+ * @class    WC_PRL_Deployments
+ * @version  4.1.1
+ */
+class WC_PRL_Deployments {
+
+	/**
+	 * Cached Deployments per page.
+	 *
+	 * @var array
+	 */
+	private $deployments;
+
+	/**
+	 * Background generator queue.
+	 *
+	 * @var WC_PRL_Generator_Queue
+	 */
+	public $queue;
+
+	/**
+	 * Array of deployment ID's to be processed by the background generator.
+	 *
+	 * @var array
+	 */
+	private $deployments_for_background_generation = array();
+
+	/**
+	 * Handles the throttle state of the current request.
+	 *
+	 * @var bool
+	 */
+	private $is_throttled;
+
+	/**
+	 * Cloning is forbidden.
+	 */
+	public function __clone() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Foul!', 'woocommerce-product-recommendations' ), '1.0.0' );
+	}
+
+	/**
+	 * Unserializing instances of this class is forbidden.
+	 */
+	public function __wakeup() {
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Foul!', 'woocommerce-product-recommendations' ), '1.0.0' );
+	}
+
+	/**
+	 * Constructor.
+	 */
+	public function __construct() {
+		$this->queue = new WC_PRL_Generator_Queue();
+		add_action( 'shutdown', array( $this, 'add_deployments_to_queue' ), 99 );
+	}
+
+	/**
+	 * Get deployments for a specific location.
+	 *
+	 * @param string $hook
+	 * @param array  $args
+	 * @param string $context
+	 *
+	 * @return array
+	 */
+	public function get_deployments( $hook, $context = 'edit', $args = array() ) {
+
+		$location = WC_PRL()->locations->get_location_by_hook( $hook );
+
+		if ( ! $location ) {
+			return array();
+		}
+
+		$hook = $location->get_current_hook();
+		if ( $hook ) {
+
+			if ( ! is_array( $this->deployments ) || ! isset( $this->deployments[ $location->get_location_id() ] ) ) {
+				$this->bulk_load_deployments( $location );
+			}
+
+			if ( empty( $this->deployments ) ) {
+				return array();
+			}
+
+			// Load source data if the context is view.
+			if ( 'view' === $context ) {
+				$this->bulk_load_source_data( $location, $args );
+			}
+
+			if ( is_array( $this->deployments ) && isset( $this->deployments[ $location->get_location_id() ][ $hook ] ) ) {
+				return $this->deployments[ $location->get_location_id() ][ $hook ];
+			}
+		}
+
+		return array();
+	}
+
+	/**
+	 * Bulk fetch source data for all deployments of a location.
+	 *
+	 * @param string $hook
+	 *
+	 * @return void
+	 */
+	private function bulk_load_source_data( $location, $args ) {
+
+		if ( ! is_array( $this->deployments ) ) {
+			return;
+		}
+
+		if ( ! isset( $this->deployments[ $location->get_location_id() ] ) ) {
+			return;
+		}
+
+		foreach ( $this->deployments[ $location->get_location_id() ] as $hook => $deployments ) {
+			foreach ( $deployments as $deployment ) {
+				$deployment->set_source_data( $location->get_source_data( $deployment, $args ) );
+			}
+		}
+	}
+
+	/**
+	 * Bulk fetch deployments based on a location.
+	 *
+	 * @param object $location
+	 *
+	 * @return void
+	 */
+	public function bulk_load_deployments( $location ) {
+
+		if ( ! is_array( $this->deployments ) ) {
+			$this->deployments = array();
+		}
+
+		$args = array(
+			'active'      => 'on',
+			'location_id' => $location->get_location_id(),
+			'order_by'    => array( 'display_order' => 'ASC' ),
+		);
+
+		$deployments = WC_PRL()->db->deployment->query( $args );
+
+		foreach ( $deployments as $deployment_data ) {
+			$deployment = new WC_PRL_Deployment_Data( $deployment_data );
+			$this->deployments[ $location->get_location_id() ][ $deployment->get_hook() ][] = new WC_PRL_Deployment( $deployment );
+		}
+	}
+
+	/**
+	 * Is the current request throttled?
+	 *
+	 * Hint: This needs to be moved to a more appropriate location.
+	 *
+	 * @return boolean
+	 */
+	public function is_generator_throttled() {
+
+		if ( ! isset( $this->is_throttled ) ) {
+			/**
+			 * Determine whether or not to throttle the generation task.
+			 *
+			 * @since 4.0.0
+			 * @since 4.1.1 Introduced default value of 1 minute.
+			 *
+			 * @param int $throttle_time_in_seconds
+			 *
+			 * @return int
+			 */
+			$throttle_time = (int) apply_filters( 'wc_prl_generation_task_throttle', 1 * MINUTE_IN_SECONDS );
+			$has_throttle  = $throttle_time > 0;
+			$is_throttled  = $has_throttle && 'yes' === get_transient( 'wc_prl_generation_task_throttled' );
+			if ( $has_throttle && ! $is_throttled ) {
+				set_transient( 'wc_prl_generation_task_throttled', 'yes', absint( $throttle_time ) );
+			}
+
+			$this->is_throttled = $is_throttled;
+		}
+
+		return $this->is_throttled;
+	}
+
+	/**
+	 * Get admin fields for accordion.
+	 *
+	 * @param array $updated_props
+	 *
+	 * @return void
+	 */
+	public function get_admin_metaboxes_content( $index, $options = array(), $ajax = false ) {
+
+		if ( ! isset( $options['engine_type'], $options['filter_type'] ) ) {
+			return;
+		}
+
+		if ( ! isset( $options['active'] ) ) {
+			$options['active'] = 'on';
+		}
+
+		if ( ! isset( $options['id'] ) ) {
+			$options['id'] = 0;
+		}
+
+		if ( ! isset( $options['display_order'] ) ) {
+			$options['display_order'] = $index + 1;
+		}
+
+		$form_index = isset( $options['form_index'] ) ? absint( $options['form_index'] ) : $index;
+
+		$state = 'closed';
+
+		if ( $ajax ) {
+			$state = 'open';
+		}
+		?>
+		<div
+		class="<?php echo $ajax ? 'wc-prl-deployments__row--added ' : ''; ?>wc-prl-deployments__row wc-metabox <?php echo esc_attr( $state ); ?>"
+		data-index="<?php echo absint( $index ) + 1; ?>" data-deployment_id="<?php echo absint( $options['id'] ); ?>">
+
+		<h3>
+			<div class="deployment_title">
+				<?php $toggle_class = 'on' === $options['active'] ? 'woocommerce-input-toggle--enabled' : 'woocommerce-input-toggle--disabled'; ?>
+				<span id="active-toggle"
+						class="woocommerce-input-toggle <?php echo esc_attr( $toggle_class ); ?>"></span>
+				<span class="deployment_title_index_container">#<span
+						class="deployment_title_index"><?php echo absint( $index ) + 1; ?></span></span>
+				<span class="deployment_title_inner">
+						<?php echo isset( $options['title'] ) ? esc_html( $options['title'] ) : ''; ?>
+					</span>
+				<?php
+				echo isset( $options['page_cache_tip'] ) ? wp_kses_post( sprintf( '<span class="woocommerce-help-tip deployment-affected-by-page-cache-help-tip" data-tip="%s"></span>', esc_attr( $options['page_cache_tip'] ) ) ) : '';
+				?>
+			</div>
+			<div class="handle">
+				<div class="handle-item toggle-item"
+					aria-label="<?php esc_attr_e( 'Click to toggle', 'woocommerce' ); ?>"></div>
+				<div class="handle-item sort-item"
+					aria-label="<?php esc_attr_e( 'Drag and drop to set order', 'woocommerce-product-recommendations' ); ?>"></div>
+				<a href="#" id="remove_row"
+					class="remove_row delete"><?php esc_html_e( 'Delete', 'woocommerce-product-recommendations' ); ?></a>
+			</div>
+		</h3>
+
+		<div
+			class="wc-prl-deployments__row__form wc-metabox-content" <?php echo $ajax ? '' : 'style="display: none;"'; ?>>
+			<input type="hidden" name="deployment[<?php echo esc_attr( $form_index ); ?>][id]"
+					value="<?php echo absint( $options['id'] ); ?>"/>
+			<input type="hidden" name="deployment[<?php echo esc_attr( $form_index ); ?>][form_index]"
+					class="form_index" value="<?php echo esc_attr( $form_index ); ?>"/>
+			<input type="hidden" name="deployment[<?php echo esc_attr( $form_index ); ?>][active]" class="form_active"
+					value="<?php echo 'on' === $options['active'] ? 'on' : 'off'; ?>"/>
+			<input type="hidden" name="deployment[<?php echo esc_attr( $form_index ); ?>][display_order]"
+					class="form_display_order" value="<?php echo esc_attr( $options['display_order'] ); ?>"/>
+
+			<div class="sw-form<?php echo $ajax ? ' sw-form--no-engine' : ''; ?>">
+
+				<div class="sw-form-field">
+					<label>
+						<?php esc_html_e( 'Title', 'woocommerce-product-recommendations' ); ?>
+					</label>
+					<div class="sw-form-content">
+						<input type="text" name="deployment[<?php echo esc_attr( $form_index ); ?>][title]"
+								class="form_deployment_title"
+								placeholder="<?php esc_attr_e( 'e.g. &quot;You may also like&hellip;&quot;', 'woocommerce-product-recommendations' ); ?>"<?php echo isset( $options['title'] ) ? ' value="' . esc_attr( $options['title'] ) . '"' : ''; ?>
+						"/>
+					</div>
+				</div>
+
+				<div class="sw-form-field">
+					<label for="prl_deploy_description">
+						<?php esc_html_e( 'Description', 'woocommerce-product-recommendations' ); ?>
+					</label>
+					<div class="sw-form-content">
+						<textarea type="text"
+									name="deployment[<?php echo esc_attr( $form_index ); ?>][description]"><?php echo isset( $options['description'] ) ? esc_textarea( $options['description'] ) : ''; ?></textarea>
+					</div>
+				</div>
+
+				<div class="sw-form-field">
+					<label>
+						<?php esc_html_e( 'Engine', 'woocommerce-product-recommendations' ); ?>
+					</label>
+					<div class="sw-form-content">
+						<select class="wc-engine-search"
+								name="deployment[<?php echo esc_attr( $form_index ); ?>][engine_id]"
+								data-placeholder="<?php esc_attr_e( 'Search for an Engine&hellip;', 'woocommerce-product-recommendations' ); ?>"
+								data-limit="100"<?php echo ( $options['filter_type'] ) ? ' data-filter_type="' . esc_attr( implode( ',', $options['filter_type'] ) ) . '"' : ''; ?>>
+							<?php
+							$engine = isset( $options['engine_id'] ) ? wc_prl_get_engine( absint( $options['engine_id'] ) ) : false;
+							if ( $engine ) {
+								$title = $engine->get_name() ? $engine->get_name() : __( '(no title)', 'woocommerce-product-recommendations' );
+								echo '<option value="' . esc_attr( $engine->get_id() ) . '" selected="selected">' . esc_html( $title ) . '</option>';
+							}
+							?>
+						</select>
+						<span class="description">
+								<?php
+								/* translators: %s engine type name */
+								echo wp_kses_post( sprintf( __( 'Supported Engine Types: %s', 'woocommerce-product-recommendations' ), '<strong>' . implode( ', ', array_map( 'wc_prl_get_engine_type_label', $options['filter_type'] ) ) . '</strong>' ) );
+								?>
+							</span>
+						<input type="hidden" class="locations_type_select"
+								value="<?php echo esc_attr( $options['engine_type'] ); ?>">
+					</div>
+				</div>
+
+				<div class="sw-form-field sw-form-field--small">
+					<label>
+						<?php esc_html_e( 'Product columns', 'woocommerce-product-recommendations' ); ?>
+					</label>
+					<div class="sw-form-content">
+						<input type="number" name="deployment[<?php echo esc_attr( $form_index ); ?>][columns]"
+								class="form_columns"<?php echo isset( $options['columns'] ) ? ' value="' . esc_attr( $options['columns'] ) . '"' : ''; ?>
+								placeholder="4"/>
+					</div>
+				</div>
+
+				<div class="sw-form-field sw-form-field--small">
+					<label>
+						<?php esc_html_e( 'Product rows', 'woocommerce-product-recommendations' ); ?>
+					</label>
+					<div class="sw-form-content">
+						<input type="number" name="deployment[<?php echo esc_attr( $form_index ); ?>][rows]"
+								class="form_rows"<?php echo isset( $options['rows'] ) ? ' value="' . esc_attr( $options['rows'] ) . '"' : ''; ?>
+								placeholder="1"/>
+					</div>
+				</div>
+
+				<div class="sw-form-os">
+					<?php
+					$args               = array();
+					$args['index']      = $form_index;
+					$args['post_name']  = 'deployment[' . $form_index . ']';
+					$args['conditions'] = isset( $options['conditions'] ) ? $options['conditions'] : array();
+
+					WC_PRL()->conditions->get_admin_conditions_html( $options['engine_type'], $args );
+					?>
+				</div>
+
+			</div>
+
+		</div>
+		</div>
+		<?php
+	}
+
+	/**
+	 * Adds all deployments of a requests in the generation queue.
+	 *
+	 * @return void
+	 */
+	public function add_deployments_to_queue() {
+		if ( empty( $this->deployments_for_background_generation ) || ! is_array( $this->deployments_for_background_generation ) ) {
+			return;
+		}
+
+		if ( $this->is_generator_throttled() ) {
+			return;
+		}
+
+		if ( ! $this->queue->is_queue_full() ) {
+			foreach ( $this->deployments_for_background_generation as $data ) {
+				$this->queue->add( $data );
+			}
+
+			$this->queue->save();
+		}
+	}
+
+	/**
+	 * Does the deployment exist the queue?
+	 *
+	 * @since 4.0.0
+	 * @see   WC_PRL_Deployment::get_products()
+	 *
+	 * @param WC_PRL_Deployment $deployment
+	 *
+	 * @return boolean
+	 */
+	public function is_deployment_in_queue( $deployment ) {
+
+		$key = $this->queue->generate_key(
+			array(
+				'id'              => $deployment->get_id(),
+				'source'          => $deployment->get_source_data(),
+				'source_data_key' => $deployment->get_source_data_string(),
+			)
+		);
+
+		$deployments_in_queue = WC_PRL()->db->queue->query(
+			array(
+				'key'   => $key,
+				'count' => true,
+			)
+		);
+
+		return $deployments_in_queue > 0;
+	}
+
+	/**
+	 * Adds a deployment ID into the background generator queue.
+	 *
+	 * @see WC_PRL_Deployment::get_products()
+	 *
+	 * @param WC_PRL_Deployment $deployment
+	 *
+	 * @return void
+	 */
+	public function schedule_deployment_generation( $deployment, $force = false ) {
+
+		// Check if it's already in the queue. The queue is the deployments_for_background_generation
+		foreach ( $this->deployments_for_background_generation as $task_info ) {
+			if ( $task_info['id'] === $deployment->get_id() ) {
+				return;
+			}
+		}
+
+		$this->deployments_for_background_generation[] = array(
+			'id'              => $deployment->get_id(),
+			'source'          => $deployment->get_source_data(),
+			'source_data_key' => $deployment->get_source_data_string(),
+			'force'           => $force,
+		);
+	}
+}

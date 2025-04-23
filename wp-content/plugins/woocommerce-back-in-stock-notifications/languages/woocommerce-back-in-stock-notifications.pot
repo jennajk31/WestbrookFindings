@@ -1,0 +1,1668 @@
+# Copyright (C) 2025 Woo
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Back In Stock Notifications 3.2.0\n"
+"Report-Msgid-Bugs-To: https://woocommerce.com/my-account/create-a-ticket/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-08T12:07:37+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"language-team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Domain: woocommerce-back-in-stock-notifications\n"
+
+#. Plugin Name of the plugin
+#: woocommerce-back-in-stock-notifications.php
+msgid "WooCommerce Back In Stock Notifications"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: woocommerce-back-in-stock-notifications.php
+msgid "https://woocommerce.com/products/back-in-stock-notifications/"
+msgstr ""
+
+#. Description of the plugin
+#: woocommerce-back-in-stock-notifications.php
+msgid "Notify your customers when their favorite products are back in stock."
+msgstr ""
+
+#. Author of the plugin
+#: woocommerce-back-in-stock-notifications.php
+msgid "Woo"
+msgstr ""
+
+#. Author URI of the plugin
+#: woocommerce-back-in-stock-notifications.php
+msgid "https://woocommerce.com/"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-dashboard-page.php:121
+msgid "Deliveries"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-dashboard-page.php:212
+msgid "Sign-ups"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-exporters.php:65
+msgid "Insufficient privileges to export notifications."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:100
+#: includes/admin/class-wc-bis-admin-menus.php:267
+#: includes/admin/settings/class-wc-bis-admin-settings.php:30
+#: includes/class-wc-bis-account.php:955
+#: includes/class-wc-bis-account.php:1017
+msgid "Stock Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:115
+#: includes/admin/class-wc-bis-admin-menus.php:193
+#: includes/admin/views/html-admin-dashboard.php:17
+msgid "Dashboard"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:130
+msgid "Add Notification"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:147
+#: includes/admin/views/html-admin-notification-edit.php:18
+msgid "Edit Notification"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:164
+#: includes/admin/class-wc-bis-admin-menus.php:203
+#: includes/admin/class-wc-bis-admin-menus.php:284
+#: includes/admin/class-wc-bis-admin-menus.php:285
+#: includes/admin/views/html-admin-activity.php:16
+#: includes/admin/views/html-admin-notification-edit.php:244
+msgid "Activity"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:198
+#: includes/admin/class-wc-bis-admin-menus.php:275
+#: includes/admin/class-wc-bis-admin-menus.php:276
+#: includes/admin/views/html-admin-dashboard.php:23
+#: includes/admin/views/html-admin-notifications.php:17
+msgid "Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-menus.php:266
+msgid "Stock Notifications Dashboard"
+msgstr ""
+
+#. translators: Update promt
+#: includes/admin/class-wc-bis-admin-notices.php:361
+msgid "<strong>WooCommerce Back In Stock Notifications</strong> is updating your database.%s"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:366
+msgid "<strong>WooCommerce Back In Stock Notifications</strong> has been updated! To keep things running smoothly, your database needs to be updated, as well."
+msgstr ""
+
+#. translators: updating resource URL
+#: includes/admin/class-wc-bis-admin-notices.php:368
+msgid "Before you proceed, please take a few minutes to <a href=\"%s\" target=\"_blank\">learn more</a> about best practices when updating."
+msgstr ""
+
+#. translators: Update promt
+#: includes/admin/class-wc-bis-admin-notices.php:374
+msgid "<strong>WooCommerce Back In Stock Notifications</strong> has not finished updating your database.%s"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:384
+msgid "<strong>WooCommerce Back In Stock Notifications</strong> has finished updating your database. Thank you for updating to the latest version!"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:402
+msgid "Update database"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:420
+msgid "run it manually"
+msgstr ""
+
+#. translators: %s: Fallback link
+#: includes/admin/class-wc-bis-admin-notices.php:422
+msgid " The process seems to be taking a little longer than usual. Let's try to %s."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:436
+msgid "get in touch with us"
+msgstr ""
+
+#. translators: %s: support link
+#: includes/admin/class-wc-bis-admin-notices.php:438
+msgid " If this message persists, please restore your database from a backup, or %s."
+msgstr ""
+
+#. translators: onboarding url
+#: includes/admin/class-wc-bis-admin-notices.php:466
+msgid "Thank you for installing <strong>WooCommerce Back In Stock Notifications</strong>. Please take a minute to <a href=\"%s\">review your settings</a>, and we won't bother you again &ndash; ever!"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:541
+msgid "Loopback test passed!"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:543
+msgid "Loopback test failed!"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:569
+msgid "Back In Stock Notifications ran a quick check-up on your site, and found that loopback requests might be failing to complete. Loopback requests are used by WooCommerce to run scheduled events, such as database upgrades. To keep your site in top shape, please ask the host or administrator of your server to look into this for you."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:570
+msgid "Repeat test"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notices.php:611
+msgid "Back In Stock Notifications ran a quick check-up on your site, and found that the task scheduler built into WooCommerce might be failing to process notifications deliveries in time. To keep your site in top shape, please ask the host or administrator of your server to look into this for you."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notifications-page.php:97
+#: includes/admin/class-wc-bis-admin-notifications-page.php:155
+msgid "Notification updated."
+msgstr ""
+
+#. translators: user email
+#: includes/admin/class-wc-bis-admin-notifications-page.php:119
+msgid "Notification sent to \"%s\"."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notifications-page.php:121
+msgid "Failed to send notification. Please make sure that (a) the notification is active, and (b) the listed product is available."
+msgstr ""
+
+#. translators: user email
+#: includes/admin/class-wc-bis-admin-notifications-page.php:148
+msgid "Verification e-mail sent to \"%s\"."
+msgstr ""
+
+#. translators: %s duplicate notification edit url
+#: includes/admin/class-wc-bis-admin-notifications-page.php:232
+msgid "A <a href=\"%s\">notification</a> for the same product and customer already exists in your database."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notifications-page.php:246
+msgid "Notification created."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notifications-page.php:280
+msgid "Notification deleted."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin-notifications-page.php:310
+msgid "Notification not found."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:159
+msgid "The installed version of <strong>Back In Stock</strong> is not compatible with the <code>selectSW</code> library found on your system. Please update Back In Stock to the latest version."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:202
+msgid "WooCommerce Back In Stock Notifications stores the following information when customers sign up to receive back-in-stock notifications:"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:205
+msgid "Customer e-mail."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:206
+msgid "Sign-up date."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:207
+msgid "Notification date."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:210
+msgid "This information can be used to personally identify customers, and is stored in the database indefinitely."
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:246
+msgid "Delete this notification permanently?"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:247
+msgid "Delete the selected notifications permanently?"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:252
+msgid "Export Notifications"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:255
+#: includes/admin/views/html-admin-dashboard.php:98
+#: includes/admin/views/html-admin-dashboard.php:138
+#: includes/admin/views/html-admin-dashboard.php:185
+msgid "No data recorded."
+msgstr ""
+
+#. translators: notifications count, date
+#: includes/admin/class-wc-bis-admin.php:257
+msgid "%notifications% signed up on %date%"
+msgstr ""
+
+#. translators: notifications count, date
+#: includes/admin/class-wc-bis-admin.php:259
+msgid "%notifications% sent on %date%"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:341
+#: includes/class-wc-bis-account.php:984
+msgid "Stock notifications"
+msgstr ""
+
+#: includes/admin/class-wc-bis-admin.php:351
+msgid "Let customers sign up to be notified when this product is restocked"
+msgstr ""
+
+#. translators: Settings page for Back in Stock Notifications
+#: includes/admin/class-wc-bis-admin.php:364
+msgid "Sign-ups for stock notifications are disabled for all products in the store. To control sign-ups for this product, first enable the global <a href=\"%s\">\"Allow sign-ups\"</a> option."
+msgstr ""
+
+#. translators: placeholder %1$s: the number of active back in stock notifications, placeholder %2$s: the deactivation URL.
+#: includes/admin/class-wc-bis-admin.php:458
+msgid "This product is not published. However, %1$s customer has signed up to be notified when this product is restocked. If you do not intend to publish or restock this product in the future, click <a href=\"%2$s\" class=\"js_wc_bis_notice_confirm_deactivate\">here</a> to deactivate that notification."
+msgid_plural "This product is not published. However, %1$s customers have signed up to be notified when this product is restocked. If you do not intend to publish or restock this product in the future, click <a href=\"%2$s\" class=\"js_wc_bis_notice_confirm_deactivate\"> to deactivate those notifications.</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$s the number of active back in stock notifications, %2$s the deactivation URL.
+#: includes/admin/class-wc-bis-admin.php:474
+msgid "Stock notifications for this product are currently disabled under <strong>Product Data > Inventory > Stock Notifications</strong>. However, %1$s notification is scheduled to be sent when this product is restocked. To deactivate it, click <a href=\"%2$s\" class=\"js_wc_bis_notice_confirm_deactivate\">here</a>."
+msgid_plural "Stock notifications for this product are currently disabled under <strong>Product Data > Inventory > Stock Notifications</strong>. However, %1$s notifications are scheduled to be sent when this product is restocked. To deactivate them, click <a href=\"%2$s\" class=\"js_wc_bis_notice_confirm_deactivate\">here</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-wc-bis-admin.php:487
+msgid "This action cannot be undone. Continue?"
+msgstr ""
+
+#. translators: placeholder 1 is the number of deactivated notifications.
+#. translators: %1$s: the number of deactivated notifications.
+#: includes/admin/class-wc-bis-admin.php:522
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:101
+msgid "%1$s notification deactivated."
+msgid_plural "%1$s notifications deactivated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:98
+#: templates/myaccount/back-in-stock.php:33
+#: templates/myaccount/back-in-stock.php:58
+#: templates/myaccount/back-in-stock.php:116
+#: templates/myaccount/back-in-stock.php:147
+msgid "ID"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:99
+msgid "Product ID"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:100
+msgid "Product title"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:101
+msgid "Product name"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:102
+msgid "Product SKU"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:103
+msgid "User ID"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:104
+msgid "User e-mail"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:105
+msgid "User firstname"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:106
+msgid "User lastname"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:107
+msgid "Sign-up date"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:108
+msgid "Activation date"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:109
+msgid "Notified date"
+msgstr ""
+
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:110
+#: includes/admin/views/html-admin-notification-create.php:108
+#: includes/admin/views/html-admin-notification-edit.php:157
+msgid "Status"
+msgstr ""
+
+#. translators: %s: meta data name
+#: includes/admin/export/class-wc-bis-notification-csv-exporter.php:230
+msgid "Meta: %s"
+msgstr ""
+
+#. translators: activity id
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:99
+msgid "#%d"
+msgstr ""
+
+#. translators: view link label
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:106
+msgid "View Notification"
+msgstr ""
+
+#. translators: %s: Notification id
+#. translators: %s: Notification code
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:113
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:164
+msgid "&#8220;%s&#8221; (Edit)"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:130
+msgid "SYSTEM"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:182
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:275
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:294
+msgctxt "list table date hover format"
+msgid "Y/m/d g:i:s a"
+msgstr ""
+
+#. translators: %s: human time diff
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:187
+msgid "%s ago"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:189
+msgctxt "list table date format"
+msgid "Y/m/d"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:203
+msgctxt "column_name"
+msgid "Notification"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:205
+msgctxt "column_name"
+msgid "Event"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:206
+msgctxt "column_name"
+msgid "User / E-mail"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:208
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:319
+msgctxt "column_name"
+msgid "Product"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:210
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:321
+msgctxt "column_name"
+msgid "Signed Up"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:324
+msgid "Activity Log"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:327
+msgid "No activity recorded just yet."
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:335
+msgid "No activity recorded"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:388
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:718
+msgid "Filter"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:424
+msgid "All customers"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:440
+msgid "Filter by type"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:442
+msgid "All types"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:474
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:825
+msgid "Filter by date"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:476
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:827
+msgid "All dates"
+msgstr ""
+
+#. translators: 1: month 2: year
+#. translators: %1$s: month %2$s: year
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-activity.php:491
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:842
+msgid "%1$s %2$d"
+msgstr ""
+
+#. translators: %s: Notification code
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:140
+msgid "Select %s"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:154
+msgid "Edit"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:155
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:182
+#: includes/admin/views/html-admin-notification-edit.php:111
+#: templates/myaccount/back-in-stock.php:28
+msgid "Pending"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:183
+msgid "Awaiting verification"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:186
+#: includes/admin/views/html-admin-dashboard.php:35
+#: includes/admin/views/html-admin-notification-edit.php:95
+#: includes/wc-bis-functions.php:42
+msgid "Queued"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:189
+#: includes/admin/views/html-admin-notification-create.php:111
+#: includes/admin/views/html-admin-notification-edit.php:118
+#: includes/admin/views/html-admin-notification-edit.php:160
+msgid "Inactive"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:192
+#: includes/admin/views/html-admin-notification-create.php:110
+#: includes/admin/views/html-admin-notification-edit.php:159
+#: templates/myaccount/back-in-stock.php:110
+msgid "Active"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:272
+msgid "Unpublished"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:290
+msgid "&mdash;"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:316
+msgctxt "column_name"
+msgid "ID"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:317
+msgctxt "column_name"
+msgid "Status"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:318
+msgctxt "column_name"
+msgid "User/Email"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:320
+msgctxt "column_name"
+msgid "SKU"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:322
+msgctxt "column_name"
+msgid "Waiting"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:352
+msgid "Activate"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:353
+#: includes/admin/views/html-admin-notification-edit.php:46
+#: templates/myaccount/back-in-stock.php:198
+msgid "Deactivate"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:354
+#: includes/admin/views/html-admin-notification-edit.php:59
+msgid "Delete permanently"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:389
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:405
+msgid "Notifications updated."
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:413
+msgid "Notifications deleted."
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:450
+msgid "Queued notifications aborted."
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:588
+msgid "No Notifications found"
+msgstr ""
+
+#. translators: %s: Notifications count
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:606
+msgctxt "notifications_status"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Notifications count
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:623
+msgctxt "notifications_status"
+msgid "Queued <span class=\"count\">(%s)</span>"
+msgid_plural "Queued <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Notifications count
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:640
+msgctxt "notifications_status"
+msgid "Active <span class=\"count\">(%s)</span>"
+msgid_plural "Active <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Notifications count
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:656
+msgctxt "notifications_status"
+msgid "Inactive <span class=\"count\">(%s)</span>"
+msgid_plural "Inactive <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:721
+msgid "Abort Queued"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:766
+#: includes/admin/views/html-admin-notification-create.php:139
+msgid "Select product&hellip;"
+msgstr ""
+
+#: includes/admin/list-tables/class-wc-bis-admin-list-table-notifications.php:800
+msgid "Select customer&hellip;"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:54
+msgid "General"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:60
+msgid "Allow sign-ups"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:61
+msgid "Let customers sign up to be notified when products in your store are restocked."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:68
+msgid "Require double opt-in to sign up"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:69
+msgid "To complete the sign-up process, customers must follow a verification link sent to their e-mail after submitting the sign-up form."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:76
+msgid "Delete unverified notification sign-ups after (in days)"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:77
+msgid "Contols how long the plugin will store unverified notification sign-ups in the database. Enter zero, or leave this field empty if you would like to store expired sign-up requests indefinitey."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:85
+msgid "Require account to sign up"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:86
+msgid "Customers must be logged in to sign up for stock notifications."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:90
+msgid "When enabled, guests will be redirected to a login page to complete the sign-up process."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:94
+msgid "Create account on sign-up"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:95
+msgid "Create an account when guests sign up for stock notifications."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:103
+msgid "Minimum stock quantity"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:104
+msgid "Stock quantity required to trigger stock notifications when restocking."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:120
+msgid "Product Page"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:126
+msgid "Display opt-in checkbox"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:127
+msgid "Enable this option if you would like guests to provide explicit consent in order to sign up."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:135
+msgid "Opt-in checkbox text"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:147
+msgid "Display signed-up customers"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:148
+msgid "Let visitors know how many customers have already signed up."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:151
+msgid "Note: If page caching is enabled on your site, the displayed count may not be accurate at all times."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:156
+msgid "Signed-up customers text"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:160
+msgid "Text to use when 1 customer has signed up for a stock notification."
+msgstr ""
+
+#. translators: customers_count
+#: includes/admin/settings/class-wc-bis-admin-settings.php:172
+msgid "Text to use when multiple customers have signed up for stock notifications. <code>{customers_count}</code> will be substituted by the number of signed-up customers."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:178
+msgid "Sign-up form text"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:186
+msgid "Sign-up form text &mdash; already signed up"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:191
+msgid "Text to display to logged-in customers who have already signed up, instead of the <strong>Sign-up form text</strong> above. <code>{manage_account_link}</code> will be substituted by the text below and converted into a <strong>My Account > Stock Notifications</strong> page link."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:200
+msgid "Text substituted into <code>{manage_account_link}</code> above."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:204
+msgid "Sign-up form button text"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:217
+msgid "Catalog"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:223
+msgid "Display sign-up prompt in catalog"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:224
+msgid "Display a message next to out-of-stock products in catalog pages, prompting customers to sign up for stock notifications."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:231
+msgid "Catalog sign-up prompt text"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:235
+msgid "Text to display next to out-of-stock products in catalog pages. <code>{prompt_link}</code> will be substituted by the text below and converted into a product page link."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:245
+#: includes/admin/settings/class-wc-bis-admin-settings.php:265
+msgid "Text substituted into <code>{prompt_link}</code> above."
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:251
+msgid "Catalog sign-up prompt text &mdash; already signed up"
+msgstr ""
+
+#: includes/admin/settings/class-wc-bis-admin-settings.php:255
+msgid "Text to display next to out-of-stock products in catalog pages to logged-in customers who have already signed up. <code>{prompt_link}</code> will be substituted by the text below and converted into a <strong>My Account > Stock Notifications</strong> page link."
+msgstr ""
+
+#. translators: %s settings page link
+#: includes/admin/settings/class-wc-bis-admin-settings.php:293
+msgid "WooCommerce is currently <a href=\"%s\">configured</a> to create new accounts without generating passwords automatically. Guests who sign up to receive stock notifications will need to reset their password before they can log into their new account."
+msgstr ""
+
+#. translators: %s settings page link
+#: includes/admin/settings/class-wc-bis-admin-settings.php:301
+msgid "WooCommerce is currently <a href=\"%s\">configured</a> to hide out-of-stock products from your catalog. Customers will not be able sign up for back-in-stock notifications while this option is enabled."
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:17
+msgid "Back In Stock Notifications"
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:22
+msgid "Database version"
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:23
+msgid "The version of WooCommerce Back In Stock Notifications reported by the database. This should be the same as the plugin version."
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:30
+msgid "Database version mismatch."
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:36
+msgid "Loopback test"
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:37
+msgid "Loopback requests are used by WooCommerce to process tasks in the background."
+msgstr ""
+
+#: includes/admin/status/views/html-admin-page-status-report.php:46
+msgid "Loopback test failed."
+msgstr ""
+
+#: includes/admin/views/html-admin-activity.php:22
+msgid "Search activity"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:27
+msgid "Sent last month"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:31
+msgid "Sent today"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:43
+msgid "Sign-Ups"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:47
+msgid "Signed up last month"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:51
+msgid "Signed up today"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:60
+msgid "Product Leaderboards"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:66
+msgid "Most wanted"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:69
+#: includes/admin/views/html-admin-dashboard.php:109
+#: includes/admin/views/html-admin-dashboard.php:156
+#: includes/admin/views/html-admin-notification-create.php:119
+#: includes/admin/views/html-admin-notification-edit.php:169
+#: templates/myaccount/back-in-stock.php:36
+#: templates/myaccount/back-in-stock.php:61
+#: templates/myaccount/back-in-stock.php:119
+#: templates/myaccount/back-in-stock.php:150
+msgid "Product"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:70
+#: includes/admin/views/html-admin-dashboard.php:157
+msgid "Customers"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:106
+msgid "Most overdue"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:110
+msgid "Days"
+msgstr ""
+
+#: includes/admin/views/html-admin-dashboard.php:147
+msgid "Most signed-up"
+msgstr ""
+
+#: includes/admin/views/html-admin-modal-notifications-export.php:19
+msgid "Generate and download a CSV file with notification sign-up data."
+msgstr ""
+
+#: includes/admin/views/html-admin-modal-notifications-export.php:26
+msgid "Options"
+msgstr ""
+
+#: includes/admin/views/html-admin-modal-notifications-export.php:31
+msgid "Apply current filters"
+msgstr ""
+
+#: includes/admin/views/html-admin-modal-notifications-export.php:39
+msgid "Export custom meta"
+msgstr ""
+
+#: includes/admin/views/html-admin-modal-notifications-export.php:50
+msgid "Download CSV"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:17
+msgid "Add notification"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:18
+#: includes/admin/views/html-admin-notification-edit.php:19
+msgid "View All"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:33
+#: includes/admin/views/html-admin-notification-edit.php:35
+msgid "Notification actions"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:40
+#: includes/admin/views/html-admin-notification-edit.php:42
+msgid "Choose an action..."
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:46
+msgid "Create"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:65
+msgid "Notification details"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:75
+#: includes/admin/views/html-admin-notification-edit.php:130
+msgid "Customer"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:96
+msgid "Search for a customer&hellip;"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:102
+msgid "&mdash;&nbsp;or&nbsp;&mdash;"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-create.php:103
+msgid "Enter customer e-mail&hellip;"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:20
+#: includes/admin/views/html-admin-notifications.php:18
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:44
+msgid "Send"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:48
+msgid "Reactivate"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:51
+msgid "Resend verification email"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:62
+msgid "Update"
+msgstr ""
+
+#. translators: %s: Notification ID
+#: includes/admin/views/html-admin-notification-edit.php:84
+msgid "Notification #%d details"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:102
+#: includes/wc-bis-functions.php:44
+msgid "Delivered"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:148
+msgid "View profile &rarr;"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:150
+#: includes/admin/views/html-admin-notification-edit.php:221
+msgid "View notifications &rarr;"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:178
+msgid "Product not found."
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:193
+#: templates/myaccount/back-in-stock.php:128
+#: templates/myaccount/back-in-stock.php:172
+msgid "Waiting"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:199
+msgctxt "notification edit date hover format"
+msgid "Y/m/d g:i:s a"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:206
+msgid "Signed up"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:213
+msgid "Signed-up customers"
+msgstr ""
+
+#: includes/admin/views/html-admin-notification-edit.php:230
+msgid "Attributes"
+msgstr ""
+
+#: includes/admin/views/html-admin-notifications.php:19
+msgid "Export"
+msgstr ""
+
+#: includes/admin/views/html-admin-notifications.php:29
+msgid "Search Notifications"
+msgstr ""
+
+#: includes/admin/views/html-admin-notifications.php:41
+msgid "No customers have signed up to receive back-in-stock notifications from you just yet."
+msgstr ""
+
+#: includes/admin/views/html-admin-notifications.php:43
+msgid "Learn more"
+msgstr ""
+
+#: includes/admin/views/html-product-data-admin.php:30
+#: templates/myaccount/back-in-stock.php:74
+#: templates/myaccount/back-in-stock.php:163
+msgid "In stock"
+msgstr ""
+
+#: includes/class-wc-bis-account.php:265
+msgid ", or create a new account now."
+msgstr ""
+
+#. translators: create_account_text
+#: includes/class-wc-bis-account.php:267
+msgid "Please log in to complete the sign-up process%s."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:307
+#: includes/class-wc-bis-product.php:218
+msgid "Sign up failed. Please try again."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:355
+msgid "You have already joined this waitlist."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:358
+#: includes/class-wc-bis-account.php:412
+#: includes/class-wc-bis-account.php:453
+#: includes/class-wc-bis-account.php:662
+#: includes/class-wc-bis-account.php:789
+msgid "Manage notifications"
+msgstr ""
+
+#: includes/class-wc-bis-account.php:378
+msgid "Thanks for signing up! An account has been created for you. Please complete the sign-up process by following the verification link sent to your e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:380
+#: includes/class-wc-bis-account.php:471
+msgid "Thanks for signing up! Please complete the sign-up process by following the verification link sent to your e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:386
+msgid "You have already joined this waitlist. Please complete the sign-up process by following the verification link sent to your e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:390
+#: templates/myaccount/back-in-stock.php:89
+msgid "Resend verification"
+msgstr ""
+
+#. translators: Product name
+#: includes/class-wc-bis-account.php:403
+#: includes/class-wc-bis-account.php:443
+msgid "You have successfully signed up and will be notified when \"%s\" is back in stock! Note that a new account has been created for you; please check your e-mail for details."
+msgstr ""
+
+#. translators: Product name
+#: includes/class-wc-bis-account.php:406
+#: includes/class-wc-bis-account.php:446
+msgid "You have successfully signed up! You will be notified when \"%s\" is back in stock."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:469
+msgid "Thanks for signing up! A new account has been created for you. Please complete the sign-up process by following the verification link sent to your e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:499
+#: includes/class-wc-bis-account.php:546
+#: includes/class-wc-bis-account.php:560
+#: includes/class-wc-bis-account.php:852
+#: includes/class-wc-bis-account.php:905
+msgid "We were unable to process your request. Please try again later, or get in touch with us for assistance."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:507
+#: includes/class-wc-bis-account.php:554
+msgid "We were unable to process your request. Notification not found."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:513
+#: includes/class-wc-bis-account.php:865
+#: includes/class-wc-bis-account.php:918
+msgid "We were unable to authorize your request. Please try again later, or get in touch with us for assistance."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:527
+msgid "Notification reactivated."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:573
+msgid "Notification deactivated."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:576
+msgid "Undo"
+msgstr ""
+
+#: includes/class-wc-bis-account.php:618
+#: includes/class-wc-bis-account.php:631
+#: includes/class-wc-bis-account.php:728
+#: includes/class-wc-bis-account.php:859
+#: includes/class-wc-bis-account.php:912
+msgid "Invalid link."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:624
+msgid "The verification link you followed has expired."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:638
+#: includes/class-wc-bis-account.php:735
+msgid "Invalid product."
+msgstr ""
+
+#. translators: %s product name
+#: includes/class-wc-bis-account.php:656
+msgid "Successfully verified stock notifications for \"%s\"."
+msgstr ""
+
+#. translators: %2$s product name, %1$s user email
+#: includes/class-wc-bis-account.php:783
+msgid "Successfully unsubscribed %1$s. You will not receive a notification when \"%2$s\" becomes available."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:801
+msgid "Please log in to manage your notifications."
+msgstr ""
+
+#. translators: %s user email
+#: includes/class-wc-bis-account.php:823
+msgid "Successfully unsubscribed %s from all stock notifications."
+msgstr ""
+
+#. translators: %s user email
+#: includes/class-wc-bis-account.php:877
+msgid "Verification e-mail sent to \"%s\". Please check your inbox!"
+msgstr ""
+
+#. translators: %s user email
+#: includes/class-wc-bis-account.php:928
+msgid "Pending notification cancelled."
+msgstr ""
+
+#: includes/class-wc-bis-account.php:985
+msgid "Endpoint for the \"My account &rarr; Stock Notifications\" page."
+msgstr ""
+
+#: includes/class-wc-bis-install.php:540
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-wc-bis-install.php:541
+msgid "Support"
+msgstr ""
+
+#: includes/class-wc-bis-product.php:55
+msgid "Sign-up failed. If this issue persists, please refresh the page and try again."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:66
+msgid "Sign-up failed. Invalid product properties."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:71
+msgid "Sign-up failed. Stock notifications for this product have been disabled."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:86
+msgid "Sign-up failed. Invalid variation properties."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:174
+msgid "Invalid e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:180
+msgid "To proceed, please consent to the creation of a new account with your e-mail."
+msgstr ""
+
+#: includes/class-wc-bis-product.php:666
+msgid "Session expired. Please reload the page and try again."
+msgstr ""
+
+#. translators: 1: Sign-up form button text
+#: includes/class-wc-bis-product.php:695
+msgid "To join the waitlist, please choose product options and click the \"%1$s\" button."
+msgstr ""
+
+#. translators: 1: Sign-up form button text
+#: includes/class-wc-bis-product.php:701
+msgid "To join the waitlist, please click the \"%1$s\" button."
+msgstr ""
+
+#. translators: 1: Sign-up form button text
+#: includes/class-wc-bis-product.php:709
+msgid "To join the waitlist, please: (1) Choose product options. (2) Enter your e-mail. (3) Click the \"%1$s\" button."
+msgstr ""
+
+#. translators: 1: Sign-up form button text
+#: includes/class-wc-bis-product.php:715
+msgid "To join the waitlist, please enter your e-mail and click the \"%1$s\" button."
+msgstr ""
+
+#. translators: $d number of notifications
+#: includes/class-wc-bis-sync-tasks.php:95
+msgid "%d identical back-in-stock notification was sent to the same customer recently. This time, we skipped it to prevent spamming."
+msgid_plural "%d identical back-in-stock notifications were sent to the same customers recently. This time, we skipped them to prevent spamming."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wc-bis-sync-tasks.php:109
+#: includes/class-wc-bis-sync-tasks.php:117
+msgid "Send anyway"
+msgstr ""
+
+#: includes/class-wc-bis-sync-tasks.php:175
+msgid "View queue"
+msgstr ""
+
+#. translators: notifications count
+#: includes/class-wc-bis-sync-tasks.php:182
+msgid "%2$d back-in-stock notification is now <a href=\"%1$s\">queued for delivery</a> in the next few minutes."
+msgid_plural "%2$d back-in-stock notifications are now <a href=\"%1$s\">queued for delivery</a> in the next few minutes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/compatibility/class-wc-bis-compatibility.php:166
+msgid "Product Bundles"
+msgstr ""
+
+#: includes/compatibility/class-wc-bis-compatibility.php:167
+msgid "WooCommerce Product Bundles"
+msgstr ""
+
+#. translators: %1$s extension name, %2$s extension url, %3$s extension full name
+#: includes/compatibility/class-wc-bis-compatibility.php:170
+msgid "The installed version of <strong>%1$s</strong> is not supported by <strong>WooCommerce Back In Stock Notifications</strong>. Please update <a href=\"%2$s\" target=\"_blank\">%3$s</a> to version <strong>%4$s</strong> or higher."
+msgstr ""
+
+#: includes/compatibility/modules/class-wc-bis-pre-orders-compatibility.php:51
+msgctxt "Pre-Order Email notification"
+msgid "\"{product_name}\" is now available for pre-order!"
+msgstr ""
+
+#: includes/compatibility/modules/class-wc-bis-pre-orders-compatibility.php:69
+msgctxt "Pre-Order Email notification"
+msgid "Now available for pre-order!"
+msgstr ""
+
+#: includes/compatibility/modules/class-wc-bis-pre-orders-compatibility.php:89
+msgctxt "Pre-Order Email notification"
+msgid "Great news: You can now pre-order \"{product_name}\"!"
+msgstr ""
+
+#: includes/compatibility/modules/class-wc-bis-pre-orders-compatibility.php:91
+msgctxt "Pre-Order Email notification"
+msgid "Thanks for joining the waitlist! You will hear from us again when \"{product_name}\" is available."
+msgstr ""
+
+#: includes/compatibility/modules/class-wc-bis-pre-orders-compatibility.php:107
+msgctxt "Pre-Order Email notification"
+msgid "Pre-Order Now"
+msgstr ""
+
+#: includes/db/class-wc-bis-activity-db.php:25
+#: includes/db/class-wc-bis-activity-db.php:32
+#: includes/db/class-wc-bis-db.php:37
+#: includes/db/class-wc-bis-db.php:44
+#: includes/db/class-wc-bis-notifications-db.php:25
+#: includes/db/class-wc-bis-notifications-db.php:32
+#: woocommerce-back-in-stock-notifications.php:122
+#: woocommerce-back-in-stock-notifications.php:129
+msgid "Foul!"
+msgstr ""
+
+#: includes/db/class-wc-bis-activity-db.php:291
+msgid "Missing activity attributes."
+msgstr ""
+
+#: includes/db/class-wc-bis-activity-db.php:353
+msgid "Invalid activity type."
+msgstr ""
+
+#. translators: %s: Email input string
+#: includes/db/class-wc-bis-notifications-db.php:480
+msgid "Invalid e-mail: %s."
+msgstr ""
+
+#: includes/db/class-wc-bis-notifications-db.php:487
+msgid "Product is empty."
+msgstr ""
+
+#: includes/db/class-wc-bis-notifications-db.php:491
+msgid "Customer is empty."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:32
+msgid "Back in stock sign-up confirmation"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:33
+msgid "Email sent to customers after completing the sign-up process successfully."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:103
+msgid "You have joined the \"{product_name}\" waitlist."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:112
+msgid "Sign-up successful"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:121
+msgid "Thanks for joining the waitlist! You will hear from us again when \"{product_name}\" is back in stock."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:265
+#: includes/emails/class-wc-bis-email-notification-received.php:395
+#: includes/emails/class-wc-bis-email-notification-verify.php:272
+msgid "Email content"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-confirm.php:266
+#: includes/emails/class-wc-bis-email-notification-received.php:396
+#: includes/emails/class-wc-bis-email-notification-verify.php:273
+msgid "Text to appear below the main e-mail header."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-received.php:33
+msgid "Back in stock notification"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-received.php:34
+msgid "Email sent to signed-up customers when a product is back in stock."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-received.php:244
+msgid "\"{product_name}\" is back in stock!"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-received.php:253
+msgid "It's back in stock!"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-received.php:262
+msgid "Great news: \"{product_name}\" is now available for purchase."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-verify.php:32
+msgid "Back in stock sign-up verification"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-verify.php:33
+msgid "Verification e-mail sent to customers, as part of the double opt-in sign-up process."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-verify.php:109
+msgid "Join the \"{product_name}\" waitlist."
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-verify.php:118
+msgid "Confirm sign-up"
+msgstr ""
+
+#: includes/emails/class-wc-bis-email-notification-verify.php:127
+msgid "Please follow the link below to complete the sign-up process and join the \"{product_name}\" waitlist."
+msgstr ""
+
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:96
+msgid "No notifications found to deactivate."
+msgstr ""
+
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:143
+msgid "No product IDs found to force-send notifications."
+msgstr ""
+
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:178
+msgid "Sorry, you cannot list resources."
+msgstr ""
+
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:192
+msgid "The product ID to deactivate notifications."
+msgstr ""
+
+#: includes/rest-api/class-wc-bis-rest-api-back-in-stock-controller.php:209
+msgid "The product IDs to force-send notifications. Ensure to specify variation IDs."
+msgstr ""
+
+#: includes/wc-bis-functions.php:27
+msgid "One time"
+msgstr ""
+
+#: includes/wc-bis-functions.php:38
+msgid "Created"
+msgstr ""
+
+#: includes/wc-bis-functions.php:39
+msgid "Reactivated"
+msgstr ""
+
+#: includes/wc-bis-functions.php:40
+msgid "Deactivated"
+msgstr ""
+
+#: includes/wc-bis-functions.php:41
+msgid "Deleted"
+msgstr ""
+
+#: includes/wc-bis-functions.php:43
+msgid "Aborted"
+msgstr ""
+
+#: includes/wc-bis-functions.php:45
+msgid "Unsubscribed"
+msgstr ""
+
+#: includes/wc-bis-functions.php:46
+msgid "Verification sent"
+msgstr ""
+
+#: includes/wc-bis-functions.php:47
+msgid "Verification cancelled"
+msgstr ""
+
+#: includes/wc-bis-functions.php:48
+msgid "Verified and activated"
+msgstr ""
+
+#. translators: %1$s: notification id, %2$s: product name
+#: includes/wc-bis-template-functions.php:87
+msgid "Created \"%2$s\" notification (#%1$d)"
+msgstr ""
+
+#. translators: %1$s: notification id
+#: includes/wc-bis-template-functions.php:90
+msgid "Created #%1$s notification"
+msgstr ""
+
+#. translators: %1$s: notification id, %2$s: product name
+#: includes/wc-bis-template-functions.php:97
+msgid "Delivered \"%2$s\" notification (#%1$d)"
+msgstr ""
+
+#. translators: %d: notification id
+#: includes/wc-bis-template-functions.php:100
+msgid "Delivered notification (#%d)"
+msgstr ""
+
+#. translators: %1$s: notification id, %2$s: product name
+#: includes/wc-bis-template-functions.php:106
+msgid "Reactivated \"%2$s\" notification (#%1$d)"
+msgstr ""
+
+#. translators: %d: notification id
+#: includes/wc-bis-template-functions.php:109
+msgid "Reactivated notification (#%d)"
+msgstr ""
+
+#. translators: %1$s: notification id, %2$s: product name
+#: includes/wc-bis-template-functions.php:115
+msgid "Deactivated \"%2$s\" notification (#%1$d)"
+msgstr ""
+
+#. translators: %d: notification id
+#: includes/wc-bis-template-functions.php:118
+msgid "Deactivated notification (#%d)"
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:133
+msgid "Want to be notified when this product is back in stock?"
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:145
+msgid "You have already joined the waitlist! Click {manage_account_link} to manage your notifications."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:155
+msgid "Notify me"
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:167
+msgid "here"
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:177
+msgid "Use this e-mail address to send me availability alerts and updates."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:187
+msgid "{customers_count} customers have joined the waitlist."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:194
+msgid "1 customer has joined the waitlist."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:208
+msgid "Out of stock. {prompt_link} to be notified when this product becomes available."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:222
+msgid "Join the waitlist"
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:236
+msgid "Out of stock. {prompt_link} and will be notified when this product becomes available."
+msgstr ""
+
+#: includes/wc-bis-template-functions.php:250
+msgid "You have joined the waitlist"
+msgstr ""
+
+#: templates/emails/html-back-in-stock-notification-confirm.php:58
+#: templates/emails/html-back-in-stock-notification-received.php:94
+msgid "You have received this message because your e-mail address was used to sign up for stock notifications on our store."
+msgstr ""
+
+#. translators: %1$s placeholder is the unsubscribe link, %2$s placeholder is the Unsubscribe text link.
+#: templates/emails/html-back-in-stock-notification-confirm.php:63
+msgctxt "unsubscribe single cta for customer"
+msgid "Click here"
+msgstr ""
+
+#. translators: %s placeholder is the text part from above.
+#: templates/emails/html-back-in-stock-notification-confirm.php:65
+msgid "Changed your mind? %s to unsubscribe."
+msgstr ""
+
+#. translators: %1$s placeholder is the unsubscribe link, %2$s placeholder is the Unsubscribe text link.
+#: templates/emails/html-back-in-stock-notification-confirm.php:68
+msgctxt "unsubscribe single cta for guest"
+msgid "Click here"
+msgstr ""
+
+#. translators: %s placeholder is the text part from above.
+#: templates/emails/html-back-in-stock-notification-confirm.php:70
+msgid "Wasn't you? %s to unsubscribe."
+msgstr ""
+
+#: templates/emails/html-back-in-stock-notification-received.php:88
+msgctxt "Email notification"
+msgid "Shop Now"
+msgstr ""
+
+#. translators: %1$s placeholder is the unsubscribe link, %2$s placeholder is the Unsubscribe text link.
+#: templates/emails/html-back-in-stock-notification-received.php:99
+msgctxt "unsubscribe all cta for customer"
+msgid "click here"
+msgstr ""
+
+#. translators: %s placeholder is the text part from above.
+#: templates/emails/html-back-in-stock-notification-received.php:101
+msgid "To manage your notifications, %s to log in to your account."
+msgstr ""
+
+#. translators: %1$s placeholder is the unsubscribe link, %2$s placeholder is the Unsubscribe text link.
+#: templates/emails/html-back-in-stock-notification-received.php:104
+msgctxt "unsubscribe all cta for guest"
+msgid "click here"
+msgstr ""
+
+#. translators: %s placeholder is the text part from above.
+#: templates/emails/html-back-in-stock-notification-received.php:106
+msgid "To stop receiving these messages, %s to unsubscribe."
+msgstr ""
+
+#: templates/emails/html-back-in-stock-notification-verify.php:55
+msgctxt "Verify email notification"
+msgid "Confirm"
+msgstr ""
+
+#. translators: %$s placeholder is the verification expiration threshold.
+#: templates/emails/html-back-in-stock-notification-verify.php:60
+msgid "This link will remain active for %s."
+msgstr ""
+
+#: templates/emails/html-back-in-stock-notification-verify.php:67
+msgid "You have received this message because your e-mail address was used to sign up for stock notifications on our store. Wasn't you? Please get in touch with us if you keep receiving these messages."
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:39
+#: templates/myaccount/back-in-stock.php:71
+#: templates/myaccount/back-in-stock.php:122
+#: templates/myaccount/back-in-stock.php:160
+msgid "Stock status"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:42
+#: templates/myaccount/back-in-stock.php:80
+#: templates/myaccount/back-in-stock.php:125
+#: templates/myaccount/back-in-stock.php:169
+#: templates/myaccount/back-in-stock.php:236
+#: templates/myaccount/back-in-stock.php:248
+msgid "Date"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:45
+#: templates/myaccount/back-in-stock.php:83
+#: templates/myaccount/back-in-stock.php:131
+#: templates/myaccount/back-in-stock.php:192
+msgid "Actions"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:76
+#: templates/myaccount/back-in-stock.php:165
+msgid "Out of stock"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:98
+msgid "Cancel"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:177
+msgctxt "myaccount table date hover format"
+msgid "Y/m/d g:i:s a"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:210
+msgid "No active notifications found."
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:230
+msgid "Your Activity"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:239
+#: templates/myaccount/back-in-stock.php:251
+msgid "Description"
+msgstr ""
+
+#: templates/myaccount/back-in-stock.php:259
+msgid "No activity recorded just yet"
+msgstr ""
+
+#: templates/single-product/back-in-stock-form.php:33
+msgid "Enter your e-mail"
+msgstr ""
+
+#. translators: %s: WC min version
+#: woocommerce-back-in-stock-notifications.php:217
+msgid "WooCommerce Back In Stock Notifications requires at least WooCommerce <strong>%s</strong>."
+msgstr ""
+
+#: woocommerce-back-in-stock-notifications.php:228
+msgid "WooCommerce Back In Stock Notifications requires at least PHP <strong>%1$s</strong>. Learn <a href=\"%2$s\">how to update PHP</a>."
+msgstr ""
